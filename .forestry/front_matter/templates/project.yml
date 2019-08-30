@@ -33,6 +33,6 @@ fields:
     max: 
   label: services
 pages:
+- projects/°-jupiter-calendar.md
 - projects/the-london-book-fair.md
 - projects/molecular-gastronomy.md
-- projects/°-jupiter-calendar.md

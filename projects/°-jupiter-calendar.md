@@ -3,7 +3,12 @@ title: "° Jupiter Calendar"
 thumbnail: "../static/uploads/827e4260883469.5a5cccc989703.jpg"
 year: "2018"
 categories:
-- graphic
+- graphic design
+intro: Very uncommon to say so my dear
+services:
+- packaging
+- typography
+- graphic design
 
 ---
 This project was created by [\[explicit\]](https://www.behance.net/explic_it), visit their Behance profile for more awesomeness.
