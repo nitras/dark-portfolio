@@ -5,7 +5,10 @@ year: "2019"
 categories:
 - identity
 intro: ''
-services: []
+services:
+- typography
+- email design
+- webdesign
 
 ---
 This project was created by [[explicit]](https://www.behance.net/explic_it), visit their Behance profile for more awesomeness.
