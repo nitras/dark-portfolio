@@ -4,7 +4,7 @@ thumbnail: "../static/uploads/Fruit-At-Work-email-header-1200.jpg"
 year: "2019"
 categories:
 - identity
-intro: This project was created by [\[explicit\]](https://www.behance.net/explic_it),
+intro: This project was created by [explicit](https://www.behance.net/explic_it),
   visit their Behance profile for more awesomeness.
 services:
 - typography
