@@ -1,6 +1,6 @@
 ---
 title: Fruit At Work
-thumbnail: "../static/uploads/25c51f70439237.5ba36d85ba934.jpg"
+thumbnail: "../static/uploads/Fruit-At-Work-email-header-1200.jpg"
 year: "2019"
 categories:
 - identity
