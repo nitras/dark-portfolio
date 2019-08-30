@@ -3,9 +3,13 @@ title: The London Book Fair
 thumbnail: "../static/uploads/c0279e51944227.58ff649a8bbfb.jpg"
 year: "2017"
 categories:
+- webdevelopment
+- logo
 - Branding
 intro: There is nothing that can [hold ](www.nitras.be "hold")me back.
-services: []
+services:
+- analytics
+- typography
 
 ---
 This project was created by [\[explicit\]](https://www.behance.net/explic_it), visit their Behance profile for more awesomeness.
