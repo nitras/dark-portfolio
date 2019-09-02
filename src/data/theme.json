@@ -1,22 +1,21 @@
 {
-  "site_name": "DPT",
-  "header_title": "Darkfolio Portfolio Theme",
+  "site_name": "Uw Grafisch Ontwerper",
+  "header_title": "Uw Grafisch Ontwerper",
   "first_letter_only": true,
-  "email": "nichlas@itsnwa.com",
-  "social": [
-    {
+  "email": "peter@nitras.be",
+  "social": [{
       "channel": "twitter",
-      "handle": "nichlaswa",
+      "handle": "nitras",
       "link_text": "tw"
     },
     {
-      "channel": "instagram",
-      "handle": "its.nwa",
-      "link_text": "ig"
+      "channel": "facebook",
+      "handle": "https://www.facebook.com/nitras.design",
+      "link_text": "fb"
     },
     {
       "channel": "github",
-      "handle": "itsnwa",
+      "handle": "nitras",
       "link_text": "gh"
     }
   ]
