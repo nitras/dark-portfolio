@@ -32,6 +32,21 @@ fields:
     min: 
     max: 
   label: services
+- name: layout
+  type: select
+  default: Project
+  config:
+    required: false
+    options:
+    - Project
+    - Project-B
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Layout
+  description: The layout for each project
 pages:
 - projects/the-london-book-fair.md
 - projects/jos.md
