@@ -41,10 +41,12 @@ query Projects {
 
 <script>
 import ProjectMeta from "@/components/ProjectMeta";
+import Layout from "~/layouts/DefaultWithHero.vue";
 
 export default {
   components: {
-    ProjectMeta
+    ProjectMeta,
+    Layout: Layout
   },
   metaInfo: {
     titleTemplate: require("../data/theme.json").site_name
@@ -63,7 +65,7 @@ export default {
       // Now, navigate to the project page
       setTimeout(() => {
         this.$router.push(route);
-      }, 450);
+      }, 150);
     }
   }
 };

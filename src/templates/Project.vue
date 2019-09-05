@@ -1,10 +1,7 @@
 <template>
   <Layout :title="$page.project.title">
     <article class="project-post">
-      <button @click="go">Click Here to Animate</button>
-      <div ref="square">FLOR EN JOBS</div>
-
-      <g-image class="thumnail" :src="$page.project.thumbnail" :alt="$page.project.title" />
+      <g-image class="thumbnail" :src="$page.project.thumbnail" :alt="$page.project.title" />
       <ProjectMeta
         :title="$page.project.title"
         :categories="$page.project.categories"
@@ -30,7 +27,7 @@ query Project ($path: String!) {
 <script>
 import ProjectMeta from "@/components/ProjectMeta";
 
-import { translate } from "@/scripts/animate";
+//import { translate } from "@/scripts/animate";
 
 export default {
   components: {
@@ -48,9 +45,11 @@ export default {
     );
   },
   methods: {
+    /*
     go() {
       translate(this.$refs.square);
     }
+    */
   }
 };
 </script>

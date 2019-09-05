@@ -1,10 +1,12 @@
 <template>
   <section class="project-meta">
     <h2 class="project-title">{{ title }}</h2>
-    <div
+
+    <!-- <div
       v-anime="{ rotate: '1turn', backgroundColor: '#FFF',
      duration: 2000, loop: true }"
-    >JJJJJJJ</div>
+    >JJJJJJJ</div>-->
+
     <ul class="project-categories">
       <li
         class="project-category"

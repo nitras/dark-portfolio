@@ -1,6 +1,7 @@
 <template>
   <div class="layout">
     <Header />
+    <Hero />
     <transition name="fade" appear>
       <main>
         <!-- a wrapper for slot is needed -->

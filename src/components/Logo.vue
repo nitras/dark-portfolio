@@ -21,18 +21,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.logo {
-  height: 3rem;
-  fill: white;
-  float: left;
-  margin-right: 1rem;
-
-  &:hover {
-    fill: green;
-    transition: all 1s;
-  }
-}
-
 a.home-link {
   border-bottom: none !important;
 }

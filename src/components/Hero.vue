@@ -1,5 +1,5 @@
 <template>
-  <section class="hero" ref="hero">
+  <section class="hero">
     <h1 class="line">My headline</h1>
     <p
       class="line"
@@ -8,13 +8,11 @@
 </template>
 
 <script>
-import { TimelineLite, TweenMax, Back, Elastic, Expo } from "gsap/all";
-
 export default {
   name: "Hero",
   el: ".hero",
   mounted() {
-    TweenMax.staggerFrom(".line", .3, { y: 20, opacity: 0 }, 0.16);
+    TweenMax.staggerFrom(".line", 0.3, { y: 20, opacity: 0 }, 0.16);
   }
 };
 </script>

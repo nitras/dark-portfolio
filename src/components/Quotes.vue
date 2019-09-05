@@ -3,7 +3,7 @@
     <transition name="slide-fade">
       <blockquote>
         <cite>{{QuoteText}}</cite>
-        <p class="passage">{{PassageText}}</p>
+        <p class="passage">&mdash; {{PassageText}}</p>
       </blockquote>
     </transition>
   </div>
@@ -13,27 +13,68 @@
 
 <script>
 var r = 0;
+var storedR;
+
 export default {
   beforeMount() {
-    this.randomQuote();
+    this.runOncePerDay();
   },
 
   methods: {
-    randomQuote: function() {
-      var r = 0;
-      var lastclear = localStorage.getItem("lastclear"),
-        time_now = new Date().getTime();
-
-      // .getTime() returns milliseconds so 1000 * 60 * 60 * 24 = 24 days
-      if (time_now - lastclear > 1000 * 60 * 60 * 24) {
-        localStorage.clear();
-        localStorage.setItem("lastclear", time_now);
+    runOncePerDay: function() {
+      if (!this.hasOneDayPassed()) {
+        storedR = this.getCookie("StoredQuote");
+      } else {
+        r = this.randomNumber();
+        storedR = r;
+        this.setCookie("StoredQuote", storedR, 1);
       }
-      r = this.randomNumber();
-      this.QuoteText = this.quotes[r].quote;
-      this.PassageText = this.quotes[r].passage;
+      this.QuoteText = this.quotes[storedR].quote;
+      this.PassageText = this.quotes[storedR].passage;
     },
-
+    setCookie: function(cname, cvalue, exdays) {
+      storedR = this.randomNumber();
+      var d = new Date();
+      d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
+      var expires = "expires=" + d.toGMTString();
+      document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    },
+    getCookie: function(cname) {
+      var name = cname + "=";
+      var ca = document.cookie.split(";");
+      for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == " ") {
+          c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+        }
+      }
+      return "";
+    },
+    checkCookie: function() {
+      var q = this.getCookie("StoredQuote");
+      if (q != "") {
+        //console.log("Welcome again:" + q);
+      } else {
+        q = storedR;
+        if (q != "" && q != null) {
+          this.setCookie("StoredQuote", q, 1);
+        }
+      }
+      return q;
+    },
+    hasOneDayPassed: function() {
+      var date = new Date().toLocaleDateString();
+      if (localStorage.yourapp_date == date) {
+        //when it's the same day we will use the stored color.
+        return false;
+      } else {
+        localStorage.yourapp_date = date;
+        return true;
+      }
+    },
     randomNumber: function() {
       this.shuffle(this.quotes);
       return Math.floor(Math.random() * this.quotes.length);
@@ -41,7 +82,6 @@ export default {
     shuffle: function(sourceArray) {
       for (var i = 0; i < sourceArray.length - 1; i++) {
         var j = i + Math.floor(Math.random() * (sourceArray.length - i));
-
         var temp = sourceArray[j];
         sourceArray[j] = sourceArray[i];
         sourceArray[i] = temp;
@@ -123,7 +163,7 @@ export default {
         {
           passage: "Acts 1:16",
           quote:
-            "“Brothers, the Scripture had to be fulfilled, which the Holy Spirit spoke beforehand by the mouth of David concerning Judas, who became a guide to those who arrested Jesus."
+            "Brothers, the Scripture had to be fulfilled, which the Holy Spirit spoke beforehand by the mouth of David concerning Judas, who became a guide to those who arrested Jesus."
         },
         {
           passage: "John 13:18-26",

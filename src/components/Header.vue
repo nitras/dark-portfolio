@@ -89,14 +89,14 @@ a.home-link {
     margin-right: 1rem;
     transition: all 0.15s ease-out;
 
- .inner-seven {
-   fill:white;
-    transition: all 0.15s ease-out;
- }
-     .outer-seven {
+    .inner-seven {
       fill: white;
-       transition: all 0.35s ease-out;
-       transition-delay: .2s;
+      transition: all 0.15s ease-out;
+    }
+    .outer-seven {
+      fill: white;
+      transition: all 0.35s ease-out;
+      transition-delay: 0.15s;
     }
   }
 
@@ -125,16 +125,13 @@ a.home-link {
         opacity: 1;
       }
       .inner-seven {
-      fill: rgb(244, 131, 114);
+        fill: rgb(244, 131, 114);
         transition: all 0.35s ease-out;
-        transition-delay: .1s;
+        transition-delay: 0.1s;
       }
       .outer-seven {
         fill: rgb(244, 131, 114);
-        top: 10px;
         transition: all 0.35s ease-out;
-        
-     
       }
     }
   }
