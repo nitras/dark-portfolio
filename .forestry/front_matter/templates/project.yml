@@ -48,7 +48,7 @@ fields:
   label: Layout
   description: The layout for each project
 pages:
+- projects/°-jupiter-calendar.md
 - projects/jos.md
 - projects/molecular-gastronomy.md
 - projects/the-london-book-fair.md
-- projects/°-jupiter-calendar.md
