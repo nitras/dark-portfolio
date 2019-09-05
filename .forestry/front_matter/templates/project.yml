@@ -47,6 +47,10 @@ fields:
       path: 
   label: Layout
   description: The layout for each project
+- name: gallery
+  type: image_gallery
+  config: {}
+  label: Gallery
 pages:
 - projects/°-jupiter-calendar.md
 - projects/jos.md
