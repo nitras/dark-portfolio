@@ -11,7 +11,7 @@ intro: <p>There is nothing that can <a href="http://www.nitras.be" title="">hold
 services:
 - analytics
 - typography
-layout: ''
+layout: Project-B
 
 ---
 Een leuke samenwerking tussen een aantal vrienden. Het is bizar hoeveel creativiteit er openbloeit zonder deadlines.
