@@ -7,6 +7,7 @@ categories:
 - Identity
 services:
 - graphic design
+layout: Project-B
 
 ---
 ![](/uploads/Fruit-At-Work-email-header-1200.jpg)
