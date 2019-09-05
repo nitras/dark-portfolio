@@ -6,10 +6,12 @@ categories:
 - webdevelopment
 - logo
 - Branding
-intro: There is nothing that can [hold ](www.nitras.be "hold")me back.
+intro: <p>There is nothing that can <a href="http://www.nitras.be" title="">hold</a>
+  me back.</p>
 services:
 - analytics
 - typography
+layout: ''
 
 ---
 Een leuke samenwerking tussen een aantal vrienden. Het is bizar hoeveel creativiteit er openbloeit zonder deadlines.
