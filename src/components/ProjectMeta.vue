@@ -1,14 +1,16 @@
 <template>
   <section class="project-meta">
     <h2 class="project-title">{{ title }}</h2>
+    <div
+      v-anime="{ rotate: '1turn', backgroundColor: '#FFF',
+     duration: 2000, loop: true }"
+    >JJJJJJJ</div>
     <ul class="project-categories">
       <li
         class="project-category"
         v-for="(category, index) in categories"
         :key="index"
-      >
-        {{ category }}
-      </li>
+      >{{ category }}</li>
     </ul>
     <time class="project-year" :datetime="year">{{ year }}</time>
   </section>

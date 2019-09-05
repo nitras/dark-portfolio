@@ -1,18 +1,27 @@
 <template>
   <div class="layout">
     <Header />
-    <slot />
+    <Hero />
+    <transition name="fade" appear>
+      <main>
+        <!-- a wrapper for slot is needed -->
+        <slot />
+      </main>
+    </transition>
+
     <Footer />
   </div>
 </template>
 
 <script>
 import Header from "@/components/Header";
+import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
 
 export default {
   components: {
     Header,
+    Hero,
     Footer
   }
 };
@@ -39,7 +48,7 @@ html {
   box-sizing: inherit;
 }
 body {
-  background-color: #131313;
+  background-color: #141313;
   color: white;
   margin: 0;
   padding: 0;
@@ -53,5 +62,16 @@ a {
   &:hover {
     border-bottom: 1.5px solid currentColor;
   }
+}
+
+/*TRANSITION*/
+.fade-enter-active {
+  transition: opacity 0.5s;
+}
+
+.fade-enter {
+  opacity: 0;
+  transform: translateY(30px);
+  transition-delay: 3s;
 }
 </style>

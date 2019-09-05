@@ -3,29 +3,38 @@
 
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
-const theme = require('./src/data/theme.json')
+const theme = require("./src/data/theme.json");
 
 module.exports = {
+  chainWebpack: config => {
+    config.module
+      .rule("vue")
+      .use("vue-svg-inline-loader")
+      .loader("vue-svg-inline-loader")
+      .options({
+        /* ... */
+      });
+  },
   siteName: theme.site_name,
   plugins: [
     {
-      use: '@gridsome/source-filesystem',
+      use: "@gridsome/source-filesystem",
       options: {
-        typeName: 'Project',
-        path: 'projects/**/*.md',
-        route: '/:slug'
+        typeName: "Project",
+        path: "projects/**/*.md",
+        route: "/:slug"
       }
     }
   ],
   transformers: {
     remark: {
-      externalLinksTarget: '_blank',
-      externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
+      externalLinksTarget: "_blank",
+      externalLinksRel: ["nofollow", "noopener", "noreferrer"],
       plugins: []
     }
   },
   devServer: {
-    host: '0.0.0.0',
+    host: "0.0.0.0",
     port: 8080
   }
-}
+};
