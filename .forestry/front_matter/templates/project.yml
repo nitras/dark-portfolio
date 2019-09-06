@@ -32,21 +32,25 @@ fields:
     min: 
     max: 
   label: services
-- name: layout
+- name: template
   type: select
   default: Project
   config:
     required: false
     options:
     - Project
-    - Project-B
+    - ProjectB
+    - ProjectC
     source:
       type: simple
       section: 
       file: 
       path: 
-  label: Layout
-  description: The layout for each project
+  label: Template
+  description: The template for each project
+  showOnly:
+    field: template
+    value: Project
 - name: gallery
   type: image_gallery
   config: {}
