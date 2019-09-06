@@ -49,7 +49,6 @@ fields:
   label: Template
   description: The template for each project
   showOnly:
-    field: template
     value: Project
 - name: gallery
   type: image_gallery
