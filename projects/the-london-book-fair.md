@@ -12,6 +12,8 @@ services:
 - analytics
 - typography
 layout: Project-B
+template: Project
+gallery: []
 
 ---
 Een leuke samenwerking tussen een aantal vrienden. Het is bizar hoeveel creativiteit er openbloeit zonder deadlines.
