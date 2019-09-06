@@ -11,6 +11,8 @@ services:
 - email design
 - webdesign
 layout: Project
+template: ProjectB
+gallery: []
 
 ---
 ![](/uploads/d1eb3270439237.5ba36d85ba378.jpg)

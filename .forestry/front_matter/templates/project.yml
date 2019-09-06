@@ -55,7 +55,7 @@ fields:
   config: {}
   label: Gallery
 pages:
+- projects/molecular-gastronomy.md
 - projects/the-london-book-fair.md
 - projects/°-jupiter-calendar.md
 - projects/jos.md
-- projects/molecular-gastronomy.md
