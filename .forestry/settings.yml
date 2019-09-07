@@ -10,6 +10,8 @@ sections:
   path: data/theme.json
   label: Theme Settings
   read_only: true
+- type: heading
+  label: Case Studies
 - type: directory
   path: projects
   label: Projects
