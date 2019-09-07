@@ -1,4 +1,18 @@
 ---
 label: Diensten
 hide_body: true
-fields: []
+fields:
+- name: diensten_title
+  type: text
+  config:
+    required: false
+  label: Diensten Titel
+- name: diensten_paragraph
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Diensten informatie
