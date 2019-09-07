@@ -8,6 +8,16 @@ fields:
 - type: text
   name: header_title
   label: header_title
+- name: header_paragraph
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: header_paragraph
+  description: A short introduction
 - type: boolean
   name: first_letter_only
   label: first_letter_only
