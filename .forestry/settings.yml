@@ -19,6 +19,9 @@ sections:
   path: diensten/**/*
   label: Diensten
   match: "**/*"
+- type: document
+  path: diensten/**/*
+  label: Diensten
 - type: heading
   label: Settings
 - type: document
