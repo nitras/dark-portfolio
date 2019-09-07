@@ -11,6 +11,8 @@ sections:
   label: Projects
   create: all
   match: "**/*"
+  templates:
+  - project
 - type: heading
   label: Diensten
 - type: heading
