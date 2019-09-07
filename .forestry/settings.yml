@@ -15,6 +15,10 @@ sections:
   - project
 - type: heading
   label: Diensten
+- type: document
+  path: diensten/**/*
+  label: Diensten
+  match: "**/*"
 - type: heading
   label: Settings
 - type: document
