@@ -16,3 +16,5 @@ fields:
     schema:
       format: markdown
   label: Diensten informatie
+pages:
+- diensten/Grafisch Ontwerp.md
