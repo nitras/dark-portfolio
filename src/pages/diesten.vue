@@ -19,7 +19,6 @@
         />
       </article>
     </section>
-    <Diensten />
   </Layout>
 </template>
 
@@ -47,13 +46,10 @@ import ProjectMeta from "@/components/ProjectMeta";
 import Layout from "~/layouts/DefaultWithHero.vue";
 import LayoutReg from "~/layouts/Default.vue";
 
-import Diensten from "~/components/Diensten.vue";
-
 export default {
   components: {
     ProjectMeta,
-    Layout: Layout,
-    Diensten
+    Layout: Layout
   },
   metaInfo: {
     titleTemplate: require("../data/theme.json").site_name

@@ -16,7 +16,7 @@ export default {
     };
   },
   mounted() {
-    TweenMax.staggerFrom(".line", 0.3, { y: 20, opacity: 0 }, 0.16);
+    TweenMax.staggerFrom(".line", 0.3, { y: 25, opacity: 0 }, 0.16);
   }
 };
 </script>
@@ -28,10 +28,11 @@ export default {
   line-height: 1.5;
   letter-spacing: 0.05em;
   h1 {
-    font-size: 6rem;
+    font-size: 9vh;
   }
   p {
     font-size: 2rem;
+    max-width: 77%;
   }
 }
 </style>

@@ -3,11 +3,17 @@
 
 import DefaultLayout from "~/layouts/Default.vue";
 import VueAnime from "vue-animejs";
+import VueAnalytics from "vue-analytics";
+
 //
 export default function(Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component("Layout", DefaultLayout);
   Vue.use(VueAnime);
+  Vue.use(VueAnalytics, {
+    id: "UA-1854162-8",
+    router
+  });
 
   /*
   head.script.push({
@@ -15,4 +21,10 @@ export default function(Vue, { router, head, isClient }) {
     body: true
   });
 */
+
+  // Push a meta tag
+  head.meta.push({
+    name: "viewport",
+    content: "width=device-width, initial-scale=1"
+  });
 }

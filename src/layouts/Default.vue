@@ -13,11 +13,12 @@
 </template>
 
 <script>
-import { TimelineLite, TweenMax, Back, Elastic, Expo } from "gsap/all";
+import { TimeLineMax, TweenMax, Back, Elastic, Expo } from "gsap/all";
 
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
+import VueAnalytics from "vue-analytics";
 
 export default {
   components: {
