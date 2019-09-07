@@ -1,15 +1,20 @@
 <template>
   <section class="hero">
-    <h1 class="line">Ik neem het persoonlijk op.</h1>
-    <p
-      class="line"
-    >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime eos nulla nam placeat magni reiciendis officiis perspiciatis fugiat ab quae dolores atque reprehenderit, deserunt minima voluptatem enim eligendi, a consequuntur!</p>
+    <h1 class="line">{{data.header_title}}</h1>
+    <p class="line">{{data.header_paragraph}}</p>
   </section>
 </template>
 
 <script>
+import data from "@/data/theme.json";
+
 export default {
   name: "Hero",
+  data() {
+    return {
+      data
+    };
+  },
   mounted() {
     TweenMax.staggerFrom(".line", 0.3, { y: 20, opacity: 0 }, 0.16);
   }
