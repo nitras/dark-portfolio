@@ -2,21 +2,20 @@
 new_page_extension: md
 auto_deploy: false
 admin_path: "/admin"
-webhook_url:
+webhook_url: 
 sections:
-  - type: heading
-    label: Settings
-  - type: document
-    path: src/data/theme.json
-    label: Theme Settings
-    read_only: false
-  - type: heading
-    label: Case Studies
-  - type: directory
-    path: projects
-    label: Projects
-    create: all
-    match: "**/*"
+- type: heading
+  label: Settings
+- type: document
+  path: src/data/theme.json
+  label: Theme Settings
+- type: heading
+  label: Case Studies
+- type: directory
+  path: projects
+  label: Projects
+  create: all
+  match: "**/*"
 upload_dir: static/uploads
 public_path: "/uploads"
 front_matter_path: "../static/uploads"
