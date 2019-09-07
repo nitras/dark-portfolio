@@ -1,0 +1,29 @@
+---
+label: Theme Settings
+hide_body: true
+fields:
+- type: text
+  name: site_name
+  label: site_name
+- type: text
+  name: header_title
+  label: header_title
+- type: boolean
+  name: first_letter_only
+  label: first_letter_only
+- type: text
+  name: email
+  label: email
+- type: field_group_list
+  name: social
+  label: social
+  fields:
+  - type: text
+    name: channel
+    label: channel
+  - type: text
+    name: handle
+    label: handle
+  - type: text
+    name: link_text
+    label: link_text
