@@ -1,9 +1,10 @@
 {
   "site_name": "Uw Grafisch Ontwerper",
-  "header_title": "Uw Grafisch Ontwerper",
+  "header_title": "Ik neem het persoonlijk op",
   "first_letter_only": true,
   "email": "peter@nitras.be",
-  "social": [{
+  "social": [
+    {
       "channel": "twitter",
       "handle": "nitras",
       "link_text": "tw"
