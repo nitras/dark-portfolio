@@ -15,13 +15,11 @@ sections:
   - project
 - type: heading
   label: Diensten
-- type: document
-  path: diensten/**/*
+- type: directory
+  path: diensten
   label: Diensten
+  create: all
   match: "**/*"
-- type: document
-  path: diensten/**/*
-  label: Diensten
 - type: heading
   label: Settings
 - type: document
