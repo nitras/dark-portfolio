@@ -9,9 +9,6 @@ sections:
   label: Projects
   create: all
   match: "**/*"
-- type: document
-  path: src/data/theme.json
-  label: Theme options
 upload_dir: static/uploads
 public_path: "/uploads"
 front_matter_path: "../static/uploads"
