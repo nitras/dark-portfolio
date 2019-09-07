@@ -67,12 +67,12 @@ a {
 
 /*TRANSITION*/
 .fade-enter-active {
-  transition: opacity 0.5s;
+  transition: opacity 0.7s;
 }
 
 .fade-enter {
   opacity: 0;
   transform: translateY(30px);
-  transition-delay: 3s;
+  transition-delay: 1s;
 }
 </style>

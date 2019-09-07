@@ -1,16 +1,43 @@
 <template>
-  <Layout :title="$page.project.title">
-    <article class="project-post">
-      <g-image class="thumbnail" :src="$page.project.thumbnail" :alt="$page.project.title" />
-      <ProjectMeta
-        :title="$page.project.title"
-        :categories="$page.project.categories"
-        :year="$page.project.year"
-      />
-      <div class="content" v-html="$page.project.content" />
-    </article>
-  </Layout>
+  <div>
+    <template v-if="$page.project.template == 'ProjectB'">
+      <!-- Layout for webdesign projects -->
+      <Layout :title="$page.project.title">
+        <article class="project-post">
+          <h1 v-if="$page.project.template === 'ProjectB'">hey: {{$page.project.template}}</h1>
+
+          <g-image class="thumbnail" :src="$page.project.thumbnail" :alt="$page.project.title" />
+
+          <ProjectMeta
+            :title="$page.project.title"
+            :categories="$page.project.categories"
+            :year="$page.project.year"
+          />
+          <div class="content" v-html="$page.project.content" />
+        </article>
+      </Layout>
+    </template>
+
+    <template v-else>
+      <!-- Layout for other projects -->
+      <Layout :title="$page.project.title">
+        <article class="project-post">
+          <h1 v-if="$page.project.template === 'ProjectB'">hey: {{$page.project.template}}</h1>
+
+          <g-image class="thumbnail" :src="$page.project.thumbnail" :alt="$page.project.title" />
+
+          <ProjectMeta
+            :title="$page.project.title"
+            :categories="$page.project.categories"
+            :year="$page.project.year"
+          />
+          <div class="content" v-html="$page.project.content" />
+        </article>
+      </Layout>
+    </template>
+  </div>
 </template>
+
 
 <page-query>
 query Project ($path: String!) {
@@ -20,6 +47,7 @@ query Project ($path: String!) {
     year
     categories
     content
+    template
   }
 }
 </page-query>

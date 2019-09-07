@@ -33,6 +33,8 @@ query Projects {
         year
         thumbnail
         categories
+        template
+        gallery
       }
     }
   }
@@ -42,6 +44,7 @@ query Projects {
 <script>
 import ProjectMeta from "@/components/ProjectMeta";
 import Layout from "~/layouts/DefaultWithHero.vue";
+import LayoutReg from "~/layouts/Default.vue";
 
 export default {
   components: {
@@ -60,12 +63,23 @@ export default {
 
       // Scroll window so that the thumbnail is 12rem from the
       // top of the browser window, this will make a seamless transition.
-      window.scrollTo({ top: finalPosition, behavior: "smooth" });
-
+      //window.scrollTo({ top: finalPosition, behavior: "smooth" });
+      TweenMax.to(window, 0.33, {
+        scrollTo: { y: finalPosition, autoKill: false },
+        ease: Sine.easeOut,
+        onComplete: this.pushRoute,
+        onCompleteParams: [route]
+      });
+      // TweenMax.to(window, 0.77, { y: finalPosition, ease: Elastic.easeOut });
       // Now, navigate to the project page
-      setTimeout(() => {
-        this.$router.push(route);
-      }, 150);
+
+      // setTimeout(() => {
+      //   this.$router.push(route);
+      // }, 350);
+    },
+    pushRoute(route) {
+      //TweenMax.staggerTo(".line", 0.3, { y: 20, opacity: 0 }, 0.16);
+      this.$router.push(route);
     }
   }
 };

@@ -1,6 +1,6 @@
 <template>
   <section class="hero">
-    <h1 class="line">My headline</h1>
+    <h1 class="line">Ik neem het persoonlijk op.</h1>
     <p
       class="line"
     >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime eos nulla nam placeat magni reiciendis officiis perspiciatis fugiat ab quae dolores atque reprehenderit, deserunt minima voluptatem enim eligendi, a consequuntur!</p>
@@ -10,7 +10,6 @@
 <script>
 export default {
   name: "Hero",
-  el: ".hero",
   mounted() {
     TweenMax.staggerFrom(".line", 0.3, { y: 20, opacity: 0 }, 0.16);
   }
@@ -24,7 +23,7 @@ export default {
   line-height: 1.5;
   letter-spacing: 0.05em;
   h1 {
-    font-size: 5rem;
+    font-size: 6rem;
   }
   p {
     font-size: 2rem;

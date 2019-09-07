@@ -7,9 +7,7 @@
         v-for="(social, index) in data.social"
         :key="index"
         :href="`https://${social.channel}.com/${social.handle}`"
-      >
-        {{ social.link_text }}
-      </a>
+      >{{ social.link_text }}</a>
     </div>
   </footer>
 </template>
@@ -25,9 +23,13 @@ export default {
   },
   methods: {
     scrollTopTop() {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
+      // window.scrollTo({
+      //   top: 0,
+      //   behavior: "smooth"
+      // });
+      TweenMax.to(window, 1, {
+        scrollTo: { y: 0, autoKill: false },
+        ease: Sine.easeOut
       });
     }
   }
