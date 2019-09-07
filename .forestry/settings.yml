@@ -6,6 +6,10 @@ webhook_url:
 sections:
 - type: heading
   label: Settings
+- type: document
+  path: "**/theme.json"
+  label: Theme Settings
+  match: "**/*"
 - type: directory
   path: projects
   label: Projects
