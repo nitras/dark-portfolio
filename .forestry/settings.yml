@@ -7,9 +7,9 @@ sections:
 - type: heading
   label: Settings
 - type: document
-  path: data/theme.json
+  path: src/data/theme.json
   label: Theme Settings
-  read_only: true
+  read_only: false
 - type: heading
   label: Case Studies
 - type: directory
