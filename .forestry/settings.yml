@@ -20,6 +20,8 @@ sections:
   label: Diensten
   create: all
   match: "**/*"
+  templates:
+  - diensten
 - type: heading
   label: Settings
 - type: document
