@@ -20,13 +20,14 @@ fields:
   description: A short introduction
 - name: header_paragraph_alternative
   type: textarea
-  default: some tst
+  default: "<p>Ik verzorg uw visuele communicatie.</p>"
   config:
     required: false
     wysiwyg: true
     schema:
       format: html-blocks
   label: header_paragraph_alternative
+  description: 'An alternative version '
 - type: boolean
   name: first_letter_only
   label: first_letter_only
