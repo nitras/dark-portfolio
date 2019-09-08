@@ -1,4 +1,9 @@
 ---
 label: Test
 hide_body: false
-fields: []
+fields:
+- name: ding_dong_diddly
+  type: text
+  config:
+    required: false
+  label: ding dong diddly
