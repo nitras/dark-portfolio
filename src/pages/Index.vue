@@ -43,6 +43,8 @@ query Projects {
 </page-query>
 
 <script>
+import { TimeLineMax, TweenMax, Back, Elastic, Expo } from "gsap";
+
 import ProjectMeta from "@/components/ProjectMeta";
 import Layout from "~/layouts/DefaultWithHero.vue";
 import LayoutReg from "~/layouts/Default.vue";
