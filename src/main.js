@@ -4,6 +4,17 @@
 import DefaultLayout from "~/layouts/Default.vue";
 import VueAnalytics from "vue-analytics";
 
+import {
+  TimeLineMax,
+  TweenMax,
+  Back,
+  Elastic,
+  Expo,
+  ScrollToPlugin
+} from "gsap/all";
+
+const plugins = [ScrollToPlugin];
+
 //
 export default function(Vue, { router, head, isClient }) {
   // Set default layout as a global component
@@ -21,8 +32,8 @@ export default function(Vue, { router, head, isClient }) {
 */
   //cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js
 
-  https: // Push a meta tag
-  head.meta.push({
+  // Push a meta tag
+  https: head.meta.push({
     name: "viewport",
     content: "width=device-width, initial-scale=1"
   });
