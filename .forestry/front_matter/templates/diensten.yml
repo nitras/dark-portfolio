@@ -1,6 +1,6 @@
 ---
 label: Diensten
-hide_body: true
+hide_body: false
 fields:
 - name: diensten_title
   type: text
@@ -16,5 +16,18 @@ fields:
     schema:
       format: markdown
   label: Diensten informatie
+- name: diensten
+  type: list
+  config:
+    use_select: false
+    min: 
+    max: 
+  label: diensten
+  description: List of services
+- name: image
+  type: file
+  config:
+    maxSize: 250
+  label: image
 pages:
 - diensten/Grafisch Ontwerp.md
