@@ -2,14 +2,14 @@
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 
 import DefaultLayout from "~/layouts/Default.vue";
-import VueAnime from "vue-animejs";
+import { TimeLineMax, TweenMax, Back, Elastic, Expo } from "gsap/all";
+
 import VueAnalytics from "vue-analytics";
 
 //
 export default function(Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component("Layout", DefaultLayout);
-  Vue.use(VueAnime);
   Vue.use(VueAnalytics, {
     id: "UA-1854162-8",
     router
