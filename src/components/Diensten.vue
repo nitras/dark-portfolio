@@ -35,8 +35,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "@/scss/nitras.scss";
 .Diensten {
   display: flex;
+
   justify-content: space-between;
   align-items: flex-end;
   padding: 4rem 2rem 5rem 2rem;
@@ -50,10 +52,24 @@ export default {
 
 .flex-grid {
   display: flex;
+  @include breakpoint(xs) {
+    display: block;
+    flex-direction: column;
+  }
 }
 .col {
   flex: 1;
 }
+/*
+@media screen and (min-width: 320px && max-width:757px) {
+  .Diensten {
+    display: flex;
+  }
+  .flex-grid {
+    flex-direction: column;
+  }
+}
+*/
 
 h2 {
   font-size: 9vh;

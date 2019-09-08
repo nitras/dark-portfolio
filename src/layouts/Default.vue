@@ -18,7 +18,6 @@ import { TimeLineMax, TweenMax, Back, Elastic, Expo } from "gsap/all";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
-import VueAnalytics from "vue-analytics";
 
 export default {
   components: {
@@ -30,6 +29,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import "@/scss/nitras.scss";
 @import url("https://rsms.me/inter/inter.css");
 html {
   font-family: "Inter", sans-serif;
