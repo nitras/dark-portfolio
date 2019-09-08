@@ -4,17 +4,6 @@
 import DefaultLayout from "~/layouts/Default.vue";
 import VueAnalytics from "vue-analytics";
 
-import {
-  TimeLineMax,
-  TweenMax,
-  Back,
-  Elastic,
-  Expo,
-  ScrollToPlugin
-} from "gsap/all";
-
-const plugins = [ScrollToPlugin];
-
 //
 export default function(Vue, { router, head, isClient }) {
   // Set default layout as a global component

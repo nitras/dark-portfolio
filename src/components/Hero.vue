@@ -22,7 +22,6 @@ export default {
     };
   },
   mounted() {
-    const TweenMax = new TweenMax();
     TweenMax.staggerFrom(".line", 0.3, { y: 25, opacity: 0 }, 0.16);
   },
   methods: {

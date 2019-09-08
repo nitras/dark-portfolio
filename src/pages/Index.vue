@@ -69,7 +69,6 @@ export default {
       // top of the browser window, this will make a seamless transition.
       //window.scrollTo({ top: finalPosition, behavior: "smooth" });
 
-      const TweenMax = new TweenMax();
       TweenMax.to(window, 0.33, {
         scrollTo: { y: finalPosition, autoKill: false },
         ease: Sine.easeOut,
