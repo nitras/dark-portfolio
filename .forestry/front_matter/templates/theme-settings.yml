@@ -2,47 +2,47 @@
 label: Theme Settings
 hide_body: true
 fields:
+- type: text
+  name: site_name
+  label: site_name
+- type: text
+  name: header_title
+  label: header_title
+- name: header_paragraph
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: header_paragraph
+  description: A short introduction
+- name: header_paragraph_alternative
+  type: textarea
+  default: some tst
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: html-blocks
+  label: header_paragraph_alternative
+- type: boolean
+  name: first_letter_only
+  label: first_letter_only
+- type: text
+  name: email
+  label: email
+- type: field_group_list
+  name: social
+  label: social
+  fields:
   - type: text
-    name: site_name
-    label: site_name
+    name: channel
+    label: channel
   - type: text
-    name: header_title
-    label: header_title
-  - name: header_paragraph
-    type: textarea
-    default: ""
-    config:
-      required: false
-      wysiwyg: false
-      schema:
-        format: markdown
-    label: header_paragraph
-    description: A short introduction
-  - name: header_paragraph_alternative
-    type: textarea
-    default: "some tst"
-    config:
-      required: false
-      wysiwyg: true
-      schema:
-        format: html-blocks
-    label: header_paragraph_alternative
-  - type: boolean
-    name: first_letter_only
-    label: first_letter_only
+    name: handle
+    label: handle
   - type: text
-    name: email
-    label: email
-  - type: field_group_list
-    name: social
-    label: social
-    fields:
-      - type: text
-        name: channel
-        label: channel
-      - type: text
-        name: handle
-        label: handle
-      - type: text
-        name: link_text
-        label: link_text
+    name: link_text
+    label: link_text
