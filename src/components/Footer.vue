@@ -27,6 +27,8 @@ export default {
       //   top: 0,
       //   behavior: "smooth"
       // });
+      const TweenMax = new TweenMax();
+
       TweenMax.to(window, 1, {
         scrollTo: { y: 0, autoKill: false },
         ease: Sine.easeOut
