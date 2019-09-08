@@ -20,7 +20,7 @@ import {
   Elastic,
   Expo,
   ScrollToPlugin
-} from "gsap";
+} from "gsap/all";
 
 const plugins = [ScrollToPlugin];
 
