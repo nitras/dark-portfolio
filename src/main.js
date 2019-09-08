@@ -2,8 +2,6 @@
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 
 import DefaultLayout from "~/layouts/Default.vue";
-
-
 import VueAnalytics from "vue-analytics";
 
 //
@@ -21,8 +19,9 @@ export default function(Vue, { router, head, isClient }) {
     body: true
   });
 */
+  //cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js
 
-  // Push a meta tag
+  https: // Push a meta tag
   head.meta.push({
     name: "viewport",
     content: "width=device-width, initial-scale=1"
