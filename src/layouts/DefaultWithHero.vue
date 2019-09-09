@@ -13,6 +13,10 @@
 </template>
 
 <script>
+import { TimeLineMax, TweenMax, Back, Elastic, Expo } from "gsap";
+import { ScrollToPlugin } from "gsap/all";
+const plugins = [ScrollToPlugin];
+
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
