@@ -13,6 +13,7 @@ services:
 layout: Project
 template: ProjectB
 gallery: []
+thumnail_alt: "../static/uploads/e9e36060883469.5a5cccc987050.jpg"
 
 ---
 ![](/uploads/d1eb3270439237.5ba36d85ba378.jpg)

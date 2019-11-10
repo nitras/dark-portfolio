@@ -60,6 +60,6 @@ fields:
   config: {}
   label: Gallery
 pages:
-- projects/°-jupiter-calendar.md
 - projects/molecular-gastronomy.md
+- projects/°-jupiter-calendar.md
 - projects/the-london-book-fair.md
