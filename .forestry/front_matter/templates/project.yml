@@ -17,11 +17,11 @@ fields:
 - type: file
   name: thumbnail
   label: thumbnail
-- name: thumnail_alt
+- name: thumbnail_alt
   type: file
   config:
     maxSize: 250
-  label: thumnail alt
+  label: thumbnail alt
 - type: text
   name: year
   label: year
