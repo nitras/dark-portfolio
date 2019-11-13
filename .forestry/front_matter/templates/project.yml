@@ -17,11 +17,16 @@ fields:
 - type: file
   name: thumbnail
   label: thumbnail
-- name: thumbnail_alt
+- name: thumbnail_hover
   type: file
   config:
     maxSize: 250
-  label: thumbnail alt
+  label: thumbnail hover
+- name: displacement_image
+  type: file
+  config:
+    maxSize: 250
+  label: Displacement Image
 - type: text
   name: year
   label: year
