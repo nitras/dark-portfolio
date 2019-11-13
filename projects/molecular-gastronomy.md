@@ -1,6 +1,6 @@
 ---
 title: Fruit At Work
-thumbnail: "../static/uploads/Fruit-At-Work-email-header-1200.jpg"
+thumbnail: "../static/uploads/827e4260883469.5a5cccc989703.jpg"
 year: "2019"
 categories:
 - identity
@@ -15,6 +15,8 @@ template: ProjectB
 gallery: []
 thumnail_alt: "../static/uploads/e9e36060883469.5a5cccc987050.jpg"
 thumbnail_alt: "../static/uploads/e9e36060883469.5a5cccc987050.jpg"
+thumbnail_hover: "../static/uploads/f5739b60883469.5a5cccc987c40.jpg"
+displacement_image: "../static/uploads/10.jpg"
 
 ---
 ![](/uploads/d1eb3270439237.5ba36d85ba378.jpg)
