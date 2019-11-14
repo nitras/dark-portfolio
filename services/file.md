@@ -1,9 +1,11 @@
 ---
 service_title: Audio Design
-service_information: Ik ontwerp van alles.
+service_information: Ik design audio
 service_list:
-- Naamkaartjes
-- Logos
+- Soundscapes
+- Game Soundtrack
+- Soundtrack
+- Bedrijfsfilm
 service_image: ''
 title: ''
 
