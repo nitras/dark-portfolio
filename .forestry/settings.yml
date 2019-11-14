@@ -7,7 +7,6 @@ sections:
 - type: document
   path: test/**/*
   label: Test
-  match: "**/*"
 - type: heading
   label: Case Studies
 - type: directory
