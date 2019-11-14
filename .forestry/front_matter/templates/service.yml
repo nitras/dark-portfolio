@@ -1,0 +1,16 @@
+---
+label: Service
+hide_body: true
+fields:
+- type: text
+  name: diensten_title
+  label: diensten_title
+- type: text
+  name: diensten_paragraph
+  label: diensten_paragraph
+- type: list
+  name: diensten
+  label: diensten
+- type: text
+  name: image
+  label: image
