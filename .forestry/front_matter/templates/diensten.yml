@@ -30,4 +30,5 @@ fields:
     maxSize: 250
   label: Image
 pages:
+- diensten/file.md
 - diensten/Grafisch Ontwerp.md
