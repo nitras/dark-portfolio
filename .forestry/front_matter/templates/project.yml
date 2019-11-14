@@ -65,6 +65,5 @@ fields:
   config: {}
   label: Gallery
 pages:
-- projects/Bepaald Soort Dienst/lala.md
 - projects/molecular-gastronomy.md
 - projects/the-london-book-fair.md
