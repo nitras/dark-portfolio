@@ -29,3 +29,5 @@ fields:
   config:
     maxSize: 250
   label: Image
+pages:
+- diensten/Grafisch Ontwerp.md
