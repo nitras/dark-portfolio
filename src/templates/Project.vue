@@ -4,9 +4,15 @@
       <!-- Layout for webdesign projects -->
       <Layout :title="$page.project.title">
         <article class="project-post">
-          <h1 v-if="$page.project.template === 'ProjectB'">hey: {{$page.project.template}}</h1>
+          <h1 v-if="$page.project.template === 'ProjectB'">
+            hey: {{ $page.project.template }}
+          </h1>
 
-          <g-image class="thumbnail" :src="$page.project.thumbnail" :alt="$page.project.title" />
+          <g-image
+            class="thumbnail"
+            :src="$page.project.thumbnail"
+            :alt="$page.project.title"
+          />
 
           <ProjectMeta
             :title="$page.project.title"
@@ -22,9 +28,15 @@
       <!-- Layout for other projects -->
       <Layout :title="$page.project.title">
         <article class="project-post">
-          <h1 v-if="$page.project.template === 'ProjectB'">hey: {{$page.project.template}}</h1>
+          <h1 v-if="$page.project.template === 'ProjectB'">
+            hey: {{ $page.project.template }}
+          </h1>
 
-          <g-image class="thumbnail" :src="$page.project.thumbnail" :alt="$page.project.title" />
+          <g-image
+            class="thumbnail"
+            :src="$page.project.thumbnail"
+            :alt="$page.project.title"
+          />
 
           <ProjectMeta
             :title="$page.project.title"
@@ -38,12 +50,13 @@
   </div>
 </template>
 
-
 <page-query>
 query Project ($path: String!) {
   project: project(path: $path) {
     title
     thumbnail
+    thumbnail_hover
+    displacement_image
     year
     categories
     content

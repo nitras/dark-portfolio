@@ -1,46 +1,76 @@
 <template>
   <section class="Diensten">
-    <header>
-      <H2>Diensten</H2>
+    <H2>Diensten</H2>
+
+    <section>
       <div class="flex-grid">
+        <!-- <article v-for="service in $page.services.edges" :key="service.node.id">
+          <p v-html="service.node.service_title"></p>
+        </article> -->
+
+        <article
+          class="dienst"
+          v-for="service in $page.services.edges"
+          :key="service.node.id"
+        >
+          <div class="col">TEST</div>
+        </article>
+
         <div class="col">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, sapiente.</p>
+          <!-- <h3>{{ services.node.service_title }}</h3> -->
+          <p>
+            Line 1 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Officia, sapiente.
+          </p>
         </div>
         <div class="col">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, sapiente.</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia,
+            sapiente.
+          </p>
         </div>
         <div class="col">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, sapiente.</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia,
+            sapiente.
+          </p>
         </div>
       </div>
-    </header>
+    </section>
+    <!-- end of sectio loop -->
   </section>
 </template>
 
-<script>
-import Logo from "@/components/Logo";
-import data from "@/data/theme.json";
-
-export default {
-  components: {
-    Logo
-  },
-  name: "Header",
-  data() {
-    return {
-      data
-    };
+<page-query>
+query Services {
+  services: allService {
+    edges{
+      node{
+        id,
+        path,
+        service_title,
+        service_information,
+        service_list,
+        service_image
+      }
+    }
   }
-};
+}
+</page-query>
+
+<script>
+export default {};
 </script>
 
 <style lang="scss" scoped>
 @import "@/scss/nitras.scss";
-.Diensten {
-  display: flex;
 
-  justify-content: space-between;
-  align-items: flex-end;
+.Diensten {
+  // display: flex;
+
+  //justify-content: space-between;
+  //align-items: flex-end;
+
   padding: 4rem 2rem 5rem 2rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -52,6 +82,7 @@ export default {
 
 .flex-grid {
   display: flex;
+
   @include breakpoint(xs) {
     display: block;
     flex-direction: column;
@@ -59,6 +90,8 @@ export default {
 }
 .col {
   flex: 1;
+  border: 1px solid;
+  margin: 1vh;
 }
 /*
 @media screen and (min-width: 320px && max-width:757px) {
@@ -73,6 +106,11 @@ export default {
 
 h2 {
   font-size: 9vh;
+  text-transform: none;
+}
+
+h3 {
+  font-size: 4vh;
   text-transform: none;
 }
 
