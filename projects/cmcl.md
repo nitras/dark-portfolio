@@ -22,7 +22,7 @@ thumbnail_hover: "../static/uploads/1a775351944227.58ff9d22ebaa2.jpg"
 displacement_image: "../static/uploads/11.jpg"
 
 ---
-Een leuke samenwerking tussen een aantal vrienden. Het is bizar hoeveel creativiteit er openbloeit zonder deadlines.
+Een leuke [samenwerking](www.nitras.be "Een link") tussen een aantal vrienden. Het is bizar hoeveel creativiteit er openbloeit zonder deadlines.
 
 ![](/uploads/2fa1bd51944227.58ff75f34c58b.jpg)![](/uploads/52654851944227.58ff649a8e55a.gif)
 
