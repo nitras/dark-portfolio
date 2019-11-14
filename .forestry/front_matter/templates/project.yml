@@ -65,5 +65,5 @@ fields:
   config: {}
   label: Gallery
 pages:
+- projects/Fruit-at-Work.md
 - projects/the-london-book-fair.md
-- projects/molecular-gastronomy.md
