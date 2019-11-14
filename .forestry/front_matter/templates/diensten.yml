@@ -22,10 +22,10 @@ fields:
     use_select: false
     min: 
     max: 
-  label: diensten
+  label: Diensten
   description: List of services
 - name: image
   type: file
   config:
     maxSize: 250
-  label: image
+  label: Image
