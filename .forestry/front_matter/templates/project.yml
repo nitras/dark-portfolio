@@ -65,5 +65,5 @@ fields:
   config: {}
   label: Gallery
 pages:
+- projects/cmcl.md
 - projects/Fruit-at-Work.md
-- projects/the-london-book-fair.md
