@@ -3,14 +3,14 @@ title: CMCL
 thumbnail: "../static/uploads/57823a51944227.58ff669ae47a1.gif"
 year: "2017"
 categories:
-- webdevelopment
-- logo
+- Webdevelopment
+- Logo
 - Branding
 intro: <p>There is nothing that can <a href="http://www.nitras.be" title="">hold</a>
   me back.</p>
 services:
-- analytics
-- typography
+- Analytics
+- Typography
 layout: Project-B
 template: Project
 gallery:
