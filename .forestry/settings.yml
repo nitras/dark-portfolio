@@ -17,14 +17,14 @@ sections:
   templates:
   - project
 - type: heading
-  label: Diensten
+  label: Services
 - type: directory
-  path: diensten
-  label: Diensten
+  path: services
+  label: Services
   create: documents
   match: "**/*"
   templates:
-  - diensten
+  - service
 - type: heading
   label: Settings
 - type: document
