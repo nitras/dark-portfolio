@@ -1,6 +1,6 @@
 ---
 service_title: Webdesign
-service_information: Ik ontwerp mooie websites
+service_information: Ik ontwerp snelle, gebruiksvriendelijke websites
 service_list:
 - Gridsome
 - Wordpress
