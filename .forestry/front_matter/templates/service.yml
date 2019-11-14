@@ -3,14 +3,14 @@ label: Service
 hide_body: true
 fields:
 - type: text
-  name: diensten_title
-  label: diensten_title
+  name: service_title
+  label: service_title
 - type: text
-  name: diensten_paragraph
-  label: diensten_paragraph
+  name: service_information
+  label: service_information
 - type: list
-  name: diensten
-  label: diensten
+  name: service_list
+  label: service_list
 - type: text
-  name: image
-  label: image
+  name: service_image
+  label: service_image
