@@ -24,6 +24,6 @@ displacement_image: "../static/uploads/11.jpg"
 ---
 Een leuke [samenwerking](www.nitras.be "Een link")! tussen een aantal vrienden. Het is bizar hoeveel creativiteit er openbloeit zonder deadlines.
 
-![](/uploads/2fa1bd51944227.58ff75f34c58b.jpg)![](/uploads/52654851944227.58ff649a8e55a.gif)
+![](/uploads/2fa1bd51944227.58ff75f34c58b.jpg "My First Image")![](/uploads/52654851944227.58ff649a8e55a.gif)
 
 Daarom is het belangrijk om samen te denken en te delen. Nooit iets anders te denken en vooral... écht vooral... te luisteren naar je eigen hart.
