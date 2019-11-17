@@ -31,6 +31,11 @@ fields:
 - type: boolean
   name: first_letter_only
   label: first_letter_only
+- name: footer_copyright_text
+  type: text
+  config:
+    required: false
+  label: Footer Copyright Text
 - type: text
   name: email
   label: email
@@ -47,8 +52,3 @@ fields:
   - type: text
     name: link_text
     label: link_text
-- name: footer_copyright_text
-  type: text
-  config:
-    required: false
-  label: Footer Copyright Text
