@@ -1,0 +1,29 @@
+---
+label: About
+hide_body: false
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+- name: image
+  type: image_gallery
+  config: {}
+  label: Image
+- name: biography
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Biography
+- name: awards
+  type: list
+  config:
+    use_select: false
+    min: 
+    max: 
+  label: Awards
