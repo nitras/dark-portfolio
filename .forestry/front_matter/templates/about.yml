@@ -35,4 +35,4 @@ fields:
     config:
       required: false
     label: project
-  label: Awards
+  label: My Awards
