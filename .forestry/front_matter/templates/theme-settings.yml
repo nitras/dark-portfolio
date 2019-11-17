@@ -47,3 +47,8 @@ fields:
   - type: text
     name: link_text
     label: link_text
+- name: footer_copyright_text
+  type: text
+  config:
+    required: false
+  label: Footer Copyright Text
