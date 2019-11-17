@@ -26,9 +26,9 @@ sections:
   label: About
 - type: directory
   path: ''
-  label: About Test
+  label: About
   create: documents
-  match: "**/*"
+  match: about/**/*
   templates:
   - about
 - type: heading
