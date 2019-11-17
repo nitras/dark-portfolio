@@ -1,6 +1,6 @@
 +++
 image = []
-title = ""
+title = "Over Mezelf"
 [a_test]
 name = ""
 project = ""
