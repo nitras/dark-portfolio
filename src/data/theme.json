@@ -7,6 +7,11 @@
   "email": "peter@nitras.be",
   "social": [
     {
+      "channel": "Instagram",
+      "handle": "@nitras",
+      "link_text": "Instagram"
+    },
+    {
       "channel": "twitter",
       "handle": "nitras",
       "link_text": "tw"
