@@ -34,6 +34,9 @@ export default {
 html {
   font-family: "Inter", sans-serif;
   font-size: 14px;
+  @include breakpoint(xs) {
+    font-size: 13px;
+  }
   font-weight: 500;
   box-sizing: border-box;
 }
@@ -66,6 +69,7 @@ a {
 
   &:hover {
     border-bottom: 1.5px solid currentColor;
+    border-width: 50%;
   }
 }
 

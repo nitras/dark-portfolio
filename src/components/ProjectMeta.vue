@@ -34,6 +34,10 @@ export default {
 <style lang="scss" scoped>
 @import "@/scss/nitras.scss";
 .project-meta {
+  @include breakpoint(xs) {
+    display: block;
+    // justify-content: space-between;
+  }
   display: flex;
 
   padding-top: 2rem;
@@ -42,6 +46,7 @@ export default {
   padding-right: 0;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+
   line-height: 1.5;
 }
 .project-title {
@@ -50,6 +55,7 @@ export default {
   margin: 0;
   @include breakpoint(xs) {
     flex: 0 0 $spacingMobile;
+    padding-bottom: 20px;
   }
   flex: 0 0 $spacingDesktop;
 }
@@ -58,6 +64,7 @@ export default {
   padding: 0;
   margin: 0;
   list-style: none;
+  margin-bottom: 30px;
 }
 .project-category {
   padding: 0;
@@ -67,5 +74,13 @@ export default {
   flex: 1;
   text-align: right;
   flex-direction: right;
+  @include breakpoint(xs) {
+    border-top: 2px solid white;
+    padding-top: 15px;
+  }
+
+  p {
+    color: pink;
+  }
 }
 </style>

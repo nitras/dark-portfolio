@@ -117,9 +117,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/scss/nitras.scss";
-.test {
-  // display: none;
-}
+
 .projects {
   @include breakpoint(xs) {
     margin: 0 1rem;
