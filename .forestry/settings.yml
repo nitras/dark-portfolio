@@ -4,9 +4,6 @@ auto_deploy: false
 admin_path: "/admin"
 webhook_url: 
 sections:
-- type: document
-  path: test/**/*
-  label: Test
 - type: heading
   label: Case Studies
 - type: directory
@@ -28,8 +25,9 @@ sections:
 - type: heading
   label: About
 - type: document
-  path: about/**/*
+  path: about
   label: About
+  match: "**/*"
 - type: heading
   label: Settings
 - type: document
