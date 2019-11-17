@@ -7,6 +7,10 @@ fields:
   config:
     required: false
   label: Title
+- name: image
+  type: image_gallery
+  config: {}
+  label: Image
 - name: biography
   type: textarea
   default: ''
@@ -23,7 +27,3 @@ fields:
     min: 
     max: 
   label: Awards
-- name: image
-  type: image_gallery
-  config: {}
-  label: Image
