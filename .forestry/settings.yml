@@ -28,7 +28,7 @@ sections:
   path: ''
   label: About
   create: documents
-  match: about/**/*
+  match: about/*
   templates:
   - about
 - type: heading
