@@ -57,10 +57,17 @@ export default {
       font-size: 8vh;
       line-height: 8vh;
     }
+    @include breakpoint(sm) {
+      line-height: 8vh;
+    }
   }
   p {
     font-size: 2rem;
     max-width: 77%;
+    @include breakpoint(sm) {
+      max-width: 100%;
+    }
+
     @include breakpoint(xs) {
       font-size: 1.7rem;
       max-width: 100%;
