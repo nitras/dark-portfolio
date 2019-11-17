@@ -1,14 +1,19 @@
 <template>
   <footer class="footer">
-    <div class="to-top" @click="scrollTopTop">-></div>
-    <div class="social">
-      <a
-        class="channel"
-        v-for="(social, index) in data.social"
-        :key="index"
-        :href="`https://${social.channel}.com/${social.handle}`"
-      >{{ social.link_text }}</a>
-    </div>
+    <div class="to-top" @click="scrollToTop">-></div>
+    <section class="sticky-footer">
+      <div class="grouped-footer">
+        <section class="social">
+          <a
+            class="channel"
+            v-for="(social, index) in data.social"
+            :key="index"
+            :href="`https://${social.channel}.com/${social.handle}`"
+          >{{ social.link_text }}</a>
+        </section>
+        <section class="year">© {{ new Date().getFullYear() }}</section>
+      </div>
+    </section>
   </footer>
 </template>
 
@@ -22,33 +27,81 @@ export default {
     };
   },
   methods: {
-    scrollTopTop() {
+    scrollToTop() {
       // window.scrollTo({
       //   top: 0,
       //   behavior: "smooth"
       // });
       TweenMax.to(window, 1, {
         scrollTo: { y: 0, autoKill: false },
-        ease: Sine.easeOut
+        ease: Power4.easeOut
       });
     }
   }
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+@import "@/scss/nitras.scss";
 .footer {
-  position: fixed;
-  bottom: 2rem;
-  left: 0;
-  width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 0 2rem;
-  z-index: 100;
-  mix-blend-mode: difference;
+  text-transform: uppercase;
+  flex-direction: row;
+  p {
+    font-size: 1rem;
+  }
 }
+.sticky-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: $footerHeight;
+  width: 100%;
+  // padding: 2rem 2rem;
+  background: $dark;
+
+  flex-direction: row;
+
+  @include breakpoint(xs) {
+    margin: 0 $siteMarginMobile;
+  }
+  margin: 0 $siteMargin;
+}
+
+.grouped-footer {
+  display: block;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.social {
+  .channel {
+    margin-right: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+}
+
+.year {
+  flex-wrap: nowrap;
+  right: 0;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: inherit;
+  margin-top: 30px;
+}
+
 .to-top {
+  // display: none;
+  position: fixed;
+  bottom: 0px;
+  // left: 2rem;
+  right: 0; //$siteMargin;
   transform: rotate(-90deg);
   user-select: none;
   cursor: pointer;
@@ -57,18 +110,26 @@ export default {
   font-weight: 700;
   line-height: 0;
   padding: 1rem 0.5rem;
+  z-index: 9999999;
+  mix-blend-mode: difference;
+  background: white;
+  color: $dark;
   &:hover {
     border: 2px solid white;
+    background: none;
+    color: white;
   }
 }
-.social {
-  .channel {
-    margin-right: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    &:last-of-type {
-      margin: 0;
-    }
-  }
-}
+
+// .footer {
+//   position: fixed;
+//   bottom: 2rem;
+//   left: 0;
+//   width: 100%;
+//   display: flex;
+//   justify-content: space-between;
+//   padding: 0 2rem;
+//   z-index: 100;
+//   mix-blend-mode: difference;
+// }
 </style>

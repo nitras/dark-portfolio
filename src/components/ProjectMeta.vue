@@ -1,12 +1,6 @@
 <template>
   <section class="project-meta">
     <h2 class="project-title">{{ title }}</h2>
-
-    <!-- <div
-      v-anime="{ rotate: '1turn', backgroundColor: '#FFF',
-     duration: 2000, loop: true }"
-    >JJJJJJJ</div>-->
-
     <ul class="project-categories">
       <li
         class="project-category"
@@ -38,18 +32,26 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "@/scss/nitras.scss";
 .project-meta {
   display: flex;
-  padding: 4rem 0;
+
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  padding-left: 0;
+  padding-right: 0;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   line-height: 1.5;
 }
 .project-title {
-  flex: 0 0 40%;
   font-size: 1rem;
   font-weight: 500;
   margin: 0;
+  @include breakpoint(xs) {
+    flex: 0 0 $spacingMobile;
+  }
+  flex: 0 0 $spacingDesktop;
 }
 .project-categories {
   flex: 1;
@@ -64,5 +66,6 @@ export default {
 .project-year {
   flex: 1;
   text-align: right;
+  flex-direction: right;
 }
 </style>

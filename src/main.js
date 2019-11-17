@@ -22,8 +22,14 @@ export default function(Vue, { router, head, isClient }) {
   //cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js
 
   // Push a meta tag
-  https: head.meta.push({
-    name: "viewport",
-    content: "width=device-width, initial-scale=1"
-  });
+  https: head.meta.push(
+    {
+      name: "viewport",
+      content: "width=device-width, initial-scale=1"
+    },
+    {
+      name: "keywords",
+      content: "HTML,css"
+    }
+  );
 }

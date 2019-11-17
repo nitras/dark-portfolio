@@ -1,12 +1,10 @@
 <template>
   <div class="layout">
     <Header />
-    <transition name="fade" appear>
-      <main>
-        <!-- a wrapper for slot is needed -->
-        <slot />
-      </main>
-    </transition>
+    <main>
+      <!-- a wrapper for slot is needed -->
+      <slot />
+    </main>
 
     <Footer />
   </div>
@@ -52,10 +50,12 @@ html {
   box-sizing: inherit;
 }
 body {
-  background-color: #141313;
+  background: $dark;
   color: white;
   margin: 0;
   padding: 0;
+  //for footer
+  margin-bottom: $footerHeight;
 }
 a {
   color: inherit;
@@ -63,9 +63,16 @@ a {
   border-bottom: 1.5px solid transparent;
   padding-bottom: 0.25rem;
   transition: border 0.15s ease;
+
   &:hover {
     border-bottom: 1.5px solid currentColor;
   }
+}
+
+main {
+  background: $dark;
+  z-index: 1;
+  position: relative;
 }
 
 /*TRANSITION*/

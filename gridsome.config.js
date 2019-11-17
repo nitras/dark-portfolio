@@ -50,25 +50,7 @@ module.exports = {
       options: {
         typeName: "Project",
         path: "projects/**/*.md",
-        route: "/:slug",
-        resolveAbsolutePaths: true,
-        remark: {
-          externalLinksTarget: "_blank",
-          externalLinksRel: ["nofollow", "noopener", "noreferrer"]
-        }
-      }
-    },
-    {
-      use: "@gridsome/source-filesystem",
-      options: {
-        typeName: "Service",
-        path: "services/**/*.md",
-        route: "/:slug",
-        resolveAbsolutePaths: true,
-        remark: {
-          externalLinksTarget: "_blank",
-          externalLinksRel: ["nofollow", "noopener", "noreferrer"]
-        }
+        route: "/:slug"
       }
     }
   ],

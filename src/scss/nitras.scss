@@ -19,14 +19,15 @@
     @warn "Breakpoint mixin supports: xs, sm, md, lg";
   }
 }
-/*
-how to use
-aside.primary {
-  float: right;
-  width: 350px;
-  @include breakpoint(sm) {
-    float: none;
-    width: 100%;
-  }
-}
-*/
+
+//colors
+$primary: rgb(244, 131, 114);
+$dark: #141313;
+$white: #f9f9f9;
+
+$footerHeight: 100px;
+$siteMargin: 3rem;
+$siteMarginMobile: 1rem;
+
+$spacingDesktop: 40%;
+$spacingMobile: 20%;

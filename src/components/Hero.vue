@@ -26,6 +26,9 @@ export default {
   },
   methods: {
     WaitAndChange: function() {}
+    // someMethod: function() {
+    //   TweenMax.from(".hero", 0.3, { opacity: 1 });
+    // }
   }
 };
 </script>
@@ -35,19 +38,31 @@ export default {
 
 .hero {
   padding: 4rem 2rem 5rem 2rem;
+
+  @include breakpoint(xs) {
+    padding-left: $siteMarginMobile;
+  }
+  padding-left: $siteMargin;
+
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0.05em;
+  background: $dark;
+  position: relative;
+  z-index: 5;
+
   h1 {
     font-size: 9vh;
     @include breakpoint(xs) {
       font-size: 8vh;
+      line-height: 8vh;
     }
   }
   p {
     font-size: 2rem;
     max-width: 77%;
     @include breakpoint(xs) {
+      font-size: 1.7rem;
       max-width: 100%;
     }
   }
