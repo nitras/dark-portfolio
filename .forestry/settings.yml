@@ -4,10 +4,6 @@ auto_deploy: false
 admin_path: "/admin"
 webhook_url: 
 sections:
-- type: document
-  path: about/about.md
-  label: Over Mezelf
-  match: "**/*"
 - type: heading
   label: Case Studies
 - type: directory
@@ -28,6 +24,10 @@ sections:
   - service
 - type: heading
   label: About
+- type: document
+  path: about/about.md
+  label: Over Mezelf
+  match: "**/*"
 - type: directory
   path: ''
   label: About
