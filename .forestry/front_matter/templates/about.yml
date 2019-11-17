@@ -36,3 +36,27 @@ fields:
   type: image_gallery
   config: {}
   label: Image
+- name: a_test
+  type: field_group
+  config: {}
+  fields:
+  - name: name
+    type: text
+    config:
+      required: false
+    label: Name
+  - name: year
+    type: datetime
+    label: Year
+    description: ''
+    config:
+      required: false
+      date_format: 
+      time_format: 
+      display_utc: false
+  - name: project
+    type: text
+    config:
+      required: false
+    label: Project
+  label: A test
