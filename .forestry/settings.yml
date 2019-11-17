@@ -26,6 +26,12 @@ sections:
   templates:
   - service
 - type: heading
+  label: About
+- type: document
+  path: about/**/*
+  label: About
+  match: "**/*"
+- type: heading
   label: Settings
 - type: document
   path: src/data/theme.json
