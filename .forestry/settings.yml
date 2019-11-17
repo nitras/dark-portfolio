@@ -27,14 +27,6 @@ sections:
 - type: document
   path: about/about.md
   label: Over Mezelf
-  match: "**/*"
-- type: directory
-  path: ''
-  label: About
-  create: documents
-  match: about/*
-  templates:
-  - about
 - type: heading
   label: Settings
 - type: document
