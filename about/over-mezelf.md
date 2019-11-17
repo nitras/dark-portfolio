@@ -1,7 +1,7 @@
 ---
 title: Over Mezelf
 image: []
-biography: ''
+biography: Een stukje tekst
 awards:
 - WWW
 - JOS
