@@ -15,6 +15,9 @@ fields:
   name: service_image
   label: service_image
 pages:
+- services/grafisch-ontwerp.md
+- services/webdesign.md
+- services/sound-design.md
 - services/sound-design.md
 - services/webdesign.md
 - services/grafisch-ontwerp.md

@@ -65,5 +65,7 @@ fields:
   config: {}
   label: Gallery
 pages:
+- projects/Fruit-at-Work.md
+- projects/cmcl.md
 - projects/cmcl.md
 - projects/Fruit-at-Work.md
