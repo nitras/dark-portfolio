@@ -3,6 +3,22 @@
     <div class="to-top" @click="scrollToTop">-></div>
     <section class="sticky-footer">
       <div class="grouped-footer">
+        <nav class="footer-navigation">
+          <ul>
+            <li>
+              <a href="/">Werk</a>
+            </li>
+            <li>
+              <a href="/diensten">Diensten</a>
+            </li>
+            <li>
+              <a href="/over">Over Mij</a>
+            </li>
+            <li>
+              <a href="/contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
         <section class="social">
           <a
             class="channel"
@@ -47,9 +63,28 @@ export default {
   display: flex;
   justify-content: space-between;
   text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
   flex-direction: row;
   p {
     font-size: 1rem;
+  }
+  margin-bottom: 50px;
+}
+
+.footer-navigation {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+}
+
+.footer-navigation ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 30px;
+  &li {
+    padding-bottom: 6rem;
   }
 }
 .sticky-footer {
@@ -108,12 +143,13 @@ export default {
   border: 2px solid transparent;
   text-align: center;
   font-weight: 700;
-  line-height: 0;
+  line-height: 0 !important;
   padding: 1rem 0.5rem;
   z-index: 9999999;
   mix-blend-mode: difference;
   background: white;
   color: $dark;
+  letter-spacing: 0;
   &:hover {
     border: 2px solid white;
     background: none;
