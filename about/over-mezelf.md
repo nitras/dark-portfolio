@@ -1,5 +1,5 @@
 +++
-image = []
+image = ["../static/uploads/11.jpg"]
 title = "Over Mezelf"
 [a_test]
 name = ""
