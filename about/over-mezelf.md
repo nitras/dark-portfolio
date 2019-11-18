@@ -15,3 +15,4 @@ description = "Gaz::mazk"
 title = "Amazing Awards"
 
 +++
+Such an amazing band
