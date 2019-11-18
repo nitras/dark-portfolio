@@ -11,7 +11,7 @@ project = "Gaz::mazk"
 year = 2019
 [[awards]]
 date = "2010-11-18T21:25:40+01:00"
-description = "An amazing award for a certain site"
+description = "An amazing award for a certain site and some other parts."
 project = "Gaz::mazk"
 title = "AWWWARDS"
 [[awards]]
