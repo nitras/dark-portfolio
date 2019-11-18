@@ -20,6 +20,11 @@ fields:
     config:
       required: false
     label: Title
+  - name: project
+    type: text
+    config:
+      required: false
+    label: Project
   - name: description
     type: text
     config:
