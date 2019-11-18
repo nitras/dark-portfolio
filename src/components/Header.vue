@@ -25,7 +25,7 @@
         </span>
       </div>
     </g-link>
-    <div class="contact">
+    <div class="contact" v-if="['contact'].indexOf($route.name) > -1">
       <g-link class="link" :href="`mailto:${data.email}`">Contact</g-link>
     </div>
   </header>

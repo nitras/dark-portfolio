@@ -27,7 +27,7 @@
             :href="`https://${social.channel}.com/${social.handle}`"
           >{{ social.link_text }}</a>
         </section>
-        <section class="year">© {{ new Date().getFullYear() }}</section>
+        <section class="year">{{data.footer_copyright_text}} &copy; {{ new Date().getFullYear() }}</section>
       </div>
     </section>
   </footer>
@@ -69,7 +69,7 @@ export default {
   p {
     font-size: 1rem;
   }
-  margin-bottom: 50px;
+  // margin-bottom: 50px;
 }
 
 .footer-navigation {
@@ -83,8 +83,22 @@ export default {
   padding: 0;
   list-style: none;
   margin-bottom: 30px;
-  &li {
-    padding-bottom: 6rem;
+
+  li {
+    padding-bottom: 0.5rem;
+
+    a  {
+      transition: color 0.5s;
+    }
+    a:hover {
+      // color: green;
+    }
+    // a:before {
+    //   content: " ";
+    // }
+    // a:hover:before {
+    //   content: "— ";
+    // }
   }
 }
 .sticky-footer {
@@ -140,7 +154,7 @@ export default {
   transform: rotate(-90deg);
   user-select: none;
   cursor: pointer;
-  border: 2px solid transparent;
+  border: $borderThickness solid transparent;
   text-align: center;
   font-weight: 700;
   line-height: 0 !important;
@@ -151,7 +165,7 @@ export default {
   color: $dark;
   letter-spacing: 0;
   &:hover {
-    border: 2px solid white;
+    border: $borderThickness solid white;
     background: none;
     color: white;
   }

@@ -75,7 +75,7 @@ export default {
   text-align: right;
   flex-direction: right;
   @include breakpoint(xs) {
-    border-top: 2px solid white;
+    border-top: $borderThickness solid white;
     padding-top: 15px;
   }
 
