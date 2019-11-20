@@ -4,6 +4,10 @@ auto_deploy: false
 admin_path: "/admin"
 webhook_url: 
 sections:
+- type: document
+  path: about/about-me-page.md
+  label: About Me Page
+  match: "**/*"
 - type: heading
   label: Case Studies
 - type: directory
