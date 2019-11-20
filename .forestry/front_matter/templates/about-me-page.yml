@@ -3,11 +3,11 @@ label: About me Page
 hide_body: true
 fields:
 - type: text
-  name: service_title
-  label: service_title
+  name: title
+  label: title
 - type: text
-  name: service_information
-  label: service_information
+  name: information
+  label: information
 - type: list
   name: service_list
   label: service_list
