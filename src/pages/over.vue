@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <section class="about">
-      <div>{{myinfo.node.id}}</div>
+  
       <!-- <article v-for="xxx in $page.myinfo.edges" :key="myinfo.node.id">
         <header>
           <h1 :v-html="$page.myinfo.node.content"></h1>
@@ -12,18 +12,7 @@
 </template>
 
 <page-query>
-query AboutMeInfo {
-  myinfo: allAboutMeInfo {
-    edges {
-      node { 
-      id
-      timeToRead
-      content
-        
-      }
-    }
-  }
-}
+
 </page-query>
 
 
