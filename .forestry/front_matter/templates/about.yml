@@ -1,7 +1,6 @@
 ---
 label: About
-hide_body: false
-display_field: title
+hide_body: true
 fields:
 - name: title
   type: text
