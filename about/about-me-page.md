@@ -1,6 +1,7 @@
 +++
-information = "Ik ben een about me page"
+information = "I am more information for the about page."
 service_image = ""
-service_list = []
-title = "About me"
+service_list = ["Another one", "hey"]
+title = "About me Title Test"
+
 +++
