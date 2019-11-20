@@ -25,7 +25,7 @@ sections:
 - type: heading
   label: About
 - type: document
-  path: about/**/*
+  path: about/over-mezelf.md
   label: Over Mezelf
 - type: heading
   label: Settings
