@@ -52,6 +52,20 @@ module.exports = {
         path: "projects/**/*.md",
         route: "/:slug"
       }
+    },
+    {
+      use: "@gridsome/source-filesystem",
+      options: {
+        typeName: "Service",
+        path: "services/**/*.md"
+      }
+    },
+    {
+      use: "@gridsome/source-filesystem",
+      options: {
+        typeName: "AboutMeInfo",
+        path: "about/**/*.md"
+      }
     }
   ],
   transformers: {
