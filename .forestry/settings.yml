@@ -7,7 +7,6 @@ sections:
 - type: document
   path: about/about-me-page.md
   label: About Me Page
-  match: "**/*"
 - type: heading
   label: Case Studies
 - type: directory
