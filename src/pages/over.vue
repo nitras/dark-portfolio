@@ -1,20 +1,25 @@
 <template>
   <Layout>
     <section class="about">
-  
-      <!-- <article v-for="xxx in $page.myinfo.edges" :key="myinfo.node.id">
+      <!-- <article v-for="myinfo in $page.aboutMe.edges" :key="myinfo.node.id">
         <header>
-          <h1 :v-html="$page.myinfo.node.content"></h1>
+          <h1>{{ myinfo.node.title }}</h1>
+          <p>{{ myinfo.node.information }}</p>
         </header>
-      /article>-->
+      </article>-->
+      <!-- <p :v-html="$page.aboutMe.title"></p> -->
     </section>
   </Layout>
 </template>
 
 <page-query>
-
+query aboutMe ($path: String!) {
+  aboutMe: aboutMe (path: $path) {
+    title
+    service_list
+  }
+}
 </page-query>
-
 
 <script>
 export default {};

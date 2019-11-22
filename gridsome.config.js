@@ -64,7 +64,7 @@ module.exports = {
       use: "@gridsome/source-filesystem",
       options: {
         typeName: "AboutMe",
-        path: "about/about-me-page.md"
+        path: "about/**/*.md"
       }
     }
   ],
