@@ -31,6 +31,6 @@ service_image: ''
 service_list:
 - Another one
 - hey
-title: 'A new title '
+title: This seems to work, doesn't it?
 
 ---
