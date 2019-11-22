@@ -4,9 +4,6 @@ auto_deploy: false
 admin_path: "/admin"
 webhook_url: 
 sections:
-- type: document
-  path: about/about-me-page.md
-  label: About Me Page
 - type: heading
   label: Case Studies
 - type: directory
@@ -28,8 +25,8 @@ sections:
 - type: heading
   label: About
 - type: document
-  path: about/over-mezelf.md
-  label: Over Mezelf
+  path: about/about-me-page.md
+  label: About Me Page
 - type: heading
   label: Settings
 - type: document
