@@ -1,0 +1,16 @@
+---
+label: Contact
+hide_body: true
+fields:
+- type: textarea
+  name: information
+  label: information
+- type: text
+  name: service_image
+  label: service_image
+- type: list
+  name: service_list
+  label: service_list
+- type: text
+  name: title
+  label: title
