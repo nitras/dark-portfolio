@@ -23,10 +23,14 @@ sections:
   templates:
   - service
 - type: heading
-  label: About
+  label: Pages
 - type: document
   path: about/about-me-page.md
   label: About Me Page
+- type: document
+  path: contact/contact-page.md
+  label: Contact
+  match: "**/*"
 - type: heading
   label: Settings
 - type: document

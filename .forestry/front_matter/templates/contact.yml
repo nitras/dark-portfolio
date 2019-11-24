@@ -1,0 +1,13 @@
+---
+label: Contact
+hide_body: true
+fields:
+- type: text
+  name: title
+  label: title
+- type: textarea
+  name: information
+  label: information
+- type: text
+  name: image
+  label: image
