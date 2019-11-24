@@ -66,24 +66,20 @@ a {
   border-bottom: $borderThickness solid transparent;
   padding-bottom: 0.25rem;
   transition: border 0.15s ease;
-
   &:hover {
     border-bottom: $borderThickness solid currentColor;
     border-width: 50%;
   }
 }
-
 main {
   background: $dark;
   z-index: 1;
   position: relative;
 }
-
 /*TRANSITION*/
 .fade-enter-active {
   transition: opacity 0.7s;
 }
-
 .fade-enter {
   opacity: 0;
   transform: translateY(30px);

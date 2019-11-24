@@ -5,7 +5,6 @@
       <Layout :title="$page.project.title">
         <article class="project-post">
           <h1 v-if="$page.project.template === 'ProjectB'">hey: {{ $page.project.template }}</h1>
-
           <g-image class="thumbnail" :src="$page.project.thumbnail" :alt="$page.project.title" />
 
           <ProjectMeta

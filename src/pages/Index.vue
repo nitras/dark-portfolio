@@ -45,8 +45,8 @@ query Projects {
 </page-query>
 
 <script>
-import ProjectMeta from "@/components/ProjectMeta";
 import Layout from "~/layouts/Default.vue";
+import ProjectMeta from "~/components/ProjectMeta";
 import Hero from "~/components/Hero.vue";
 
 // import Diensten from "~/components/Diensten.vue";

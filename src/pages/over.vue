@@ -7,22 +7,54 @@
           <p>{{ myinfo.node.information }}</p>
         </header>
       </article>-->
-      <!-- <p :v-html="$page.aboutMe.title"></p> -->
+      <header>
+        <h1>{{$page.aboutMe.title}}</h1>
+      </header>
+      <article>
+        <p>{{$page.aboutMe.timeToRead}}</p>
+        <p>{{$page.aboutMe.information}}</p>
+
+        <section class="services">
+          <header>
+            <H1>Services</H1>
+          </header>
+          <ul v-for="service in $page.aboutMe.service_list" :key="$page.aboutMe.id">
+            <li>{{service}}</li>
+          </ul>
+        </section>
+      </article>
+      <!-- <h1>{{$page.mypersonaldata.title}}</h1> -->
     </section>
   </Layout>
 </template>
 
+
 <page-query>
-query aboutMe ($path: String!) {
-  aboutMe: aboutMe (path: $path) {
+
+
+query 
+{
+  aboutMe: about(path: "/about/about-me-page") 
+  {
+    id
     title
     service_list
+    information
+    timeToRead
   }
 }
 </page-query>
 
 <script>
-export default {};
+// import myData from "~/about/about-me-page.yml";
+
+export default {
+  // data() {
+  //   return {
+  //     myData
+  //   };
+  // }
+};
 </script>
 
 <style lang="scss" scoped>
@@ -30,19 +62,16 @@ export default {};
 
 .about {
   padding: 4rem 2rem 5rem 2rem;
-
   @include breakpoint(xs) {
     padding-left: $siteMarginMobile;
   }
   padding-left: $siteMargin;
-
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0.05em;
   background: $dark;
   position: relative;
   z-index: 5;
-  display: inline-flex;
 
   h1 {
     font-size: 9vh;
@@ -59,9 +88,7 @@ export default {};
 
   p {
     font-size: 2rem;
-
     width: $heroTextWidth;
-
     @include breakpoint(xs) {
       font-size: 1.7rem;
       width: 100%;
