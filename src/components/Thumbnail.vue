@@ -1,11 +1,24 @@
 <template>
   <div>
-    hello
     <!-- <nav_header /> -->
+    <!-- <div class="container">
+      <div class="project-thumbnail" v-if="hover" id="hover"></div>
+      <g-image v-if="!hover" :src="image1" class="project-thumbnail"></g-image>
+    </div>-->
     <div class="container">
-      <div v-if="hover" id="hover" :key="key" :style="{height:height,width:width}"></div>
+      <div
+        class="project-thumbnail"
+        v-if="hover"
+        id="hover"
+        :key="key"
+        :style="{height:height,width:width}"
+      ></div>
       <g-image v-if="!hover" :src="image1" :style="{height:height,width:width}"></g-image>
     </div>
+    <!-- <div class="container">
+      <div class="project-thumbnail" v-if="hover" id="hover" :key="key" :style="{height:height,width:width}"></div>
+      <g-image v-if="!hover" :src="image1" :style="{height:height,width:width}"></g-image>
+    </div>-->
   </div>
 </template>
 
@@ -31,13 +44,10 @@ export default {
       default: 0.1
     },
     height: {
-      default: "500px"
+      default: "200px"
     },
     width: {
-      default: "500px"
-    },
-    key: {
-      type: "String"
+      default: "100%"
     },
     hover: {
       type: Boolean,
@@ -62,3 +72,15 @@ export default {
 };
 </script>
 
+<style>
+.project-thumbnail {
+  display: block;
+  width: 100%;
+  height: auto !important;
+}
+canvas {
+  display: inline-block;
+  height: auto;
+  width: 100%;
+}
+</style>
