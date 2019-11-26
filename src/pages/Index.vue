@@ -9,11 +9,23 @@
           v-for="project in $page.projects.edges"
           :key="project.node.id"
         >
-          <g-image
+        
+          <Thumbnail
+            :key="project.node.id"
+            :image1="project.node.thumbnail.src"
+            :image2="project.node.thumbnail_hover.src"
+            :displacementImage="project.node.displacement_image.src"
+            height="500px"
+            width="500px"
+            :hover="true"
+          ></Thumbnail>
+
+          <!-- <g-image
             class="project-thumbnail"
             :src="project.node.thumbnail.src"
             :alt="project.node.title"
-          ></g-image>
+          ></g-image>-->
+
           <ProjectMeta
             :title="project.node.title"
             :categories="project.node.categories"
@@ -35,6 +47,8 @@ query Projects {
         title
         year
         thumbnail
+        thumbnail_hover
+        displacement_image
         categories
         template
         gallery
@@ -47,7 +61,12 @@ query Projects {
 <script>
 import Layout from "~/layouts/Default.vue";
 import ProjectMeta from "~/components/ProjectMeta";
+import Thumbnail from "~/components/Thumbnail";
 import Hero from "~/components/Hero.vue";
+
+import Img1 from "../../assets/Img21.jpg";
+import Img2 from "../../assets/Img22.jpg";
+import Img3 from "../../assets/displacement/6.jpg";
 
 // import Diensten from "~/components/Diensten.vue";
 
@@ -55,7 +74,20 @@ export default {
   components: {
     ProjectMeta,
     Layout: Layout,
-    Hero
+    Hero,
+    Thumbnail
+  },
+  data() {
+    return {
+      animation: {
+        image1: Img1,
+        image2: Img2,
+        speedIn: 1,
+        speedOut: 1,
+        intensity: 1,
+        displacementImage: Img3
+      }
+    };
   },
 
   metaInfo: {
@@ -68,6 +100,7 @@ export default {
       { y: 77, opacity: 0, delay: 0.11 },
       0.16
     );
+    console.log(project.node.thumbnail.src);
   },
   methods: {
     goTo(event, route) {

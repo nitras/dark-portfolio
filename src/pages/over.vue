@@ -30,8 +30,6 @@
 
 
 <page-query>
-
-
 query 
 {
   aboutMe: about(path: "/about/about-me-page") 

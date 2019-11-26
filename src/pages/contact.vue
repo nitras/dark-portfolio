@@ -14,11 +14,13 @@
 
 <script>
 import Header from "~/components/Header.vue";
+import Thumbnail from "~/components/Thumbnail";
 // import myData from "~/about/about-me-page.yml";
 
 export default {
   components: {
-    Header
+    Header,
+    Thumbnail
   }
   // data() {
   //   return {
