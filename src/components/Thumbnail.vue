@@ -10,10 +10,9 @@
         class="project-thumbnail"
         v-if="hover"
         id="hover"
-        :key="key"
-        :style="{height:height,width:width}"
+        :style="{ height: height, width: width }"
       ></div>
-      <g-image v-if="!hover" :src="image1" :style="{height:height,width:width}"></g-image>
+      <g-image v-if="!hover" :src="image1"></g-image>
     </div>
     <!-- <div class="container">
       <div class="project-thumbnail" v-if="hover" id="hover" :key="key" :style="{height:height,width:width}"></div>
@@ -27,6 +26,9 @@ import Thumbnail from "hover-effect";
 import hoverEffect from "hover-effect";
 
 export default {
+  id() {
+    return this._uid;
+  },
   name: "Thumbnail",
   props: {
     image1: {
@@ -43,15 +45,15 @@ export default {
     intensity: {
       default: 0.1
     },
-    height: {
-      default: "200px"
+    hover: {
+      type: Boolean,
+      default: true
     },
     width: {
       default: "100%"
     },
-    hover: {
-      type: Boolean,
-      default: true
+    height: {
+      default: "350px"
     }
   },
 
@@ -76,11 +78,6 @@ export default {
 .project-thumbnail {
   display: block;
   width: 100%;
-  height: auto !important;
-}
-canvas {
-  display: inline-block;
-  height: auto;
-  width: 100%;
+  height: 100%;
 }
 </style>

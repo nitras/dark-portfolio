@@ -74,13 +74,15 @@ export default {
   h1 {
     font-size: 9vh;
     width: $heroTitleWidth;
+
     @include breakpoint(sm) {
-      line-height: 8vh;
+      line-height: $lineheightWeb;
     }
+
     @include breakpoint(xs) {
       width: 100%;
       font-size: 8vh;
-      line-height: 8vh;
+      line-height: $lineheightWeb;
     }
   }
 

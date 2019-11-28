@@ -62,6 +62,13 @@ module.exports = {
         typeName: "About",
         path: "about/about-me-page.md"
       }
+    },
+    {
+      use: "@gridsome/source-filesystem",
+      options: {
+        typeName: "Contact",
+        path: "contact/contact-page.md"
+      }
     }
   ],
   transformers: {
