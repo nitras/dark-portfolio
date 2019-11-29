@@ -14,7 +14,7 @@
             :image2="project.node.thumbnail_hover.src"
             :displacementImage="project.node.displacement_image.src"
             :hover="true"
-            style="width:300px,height:auto"
+            style="width:100%,height:auto"
           ></Thumbnail>
 
           <!-- <g-image

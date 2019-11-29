@@ -25,20 +25,20 @@
         </span>
       </div>
     </g-link>
-    <div class="contact" v-if="['contact'].indexOf($route.name) > -1">
-      <g-link class="link" :href="`mailto:${data.email}`">Contact</g-link>
-    </div>
+    <Navigation></Navigation>
   </header>
 </template>
 
 <script>
 import { TimeLineMax, TweenMax, Back, Elastic, Expo } from "gsap";
 import Logo from "@/components/Logo";
+import Navigation from "@/components/Navigation";
 import data from "@/data/theme.json";
 
 export default {
   components: {
-    Logo
+    Logo,
+    Navigation
   },
   name: "Header",
   data() {
