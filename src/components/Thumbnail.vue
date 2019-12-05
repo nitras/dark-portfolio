@@ -1,7 +1,5 @@
 <template>
   <div>
-    hello
-    <!-- <nav_header /> -->
     <div class="container">
       <div  v-if="hover" ref="hover" :style={height:height,width:width}>
       </div >
@@ -15,6 +13,12 @@
 import hoverEffect from 'hover-effect' 
 
 export default {
+
+
+  data(){
+    calcheight
+  },
+  
   name:"Thumbnail",
     props:{
       image1:{
@@ -25,27 +29,38 @@ export default {
       displacementImage:{
      },
      speedIn:{
-       default: 1
+       default: .2
      },
      speedOut:{
        default: 1
      },
      intensity:{
-       default: 0.1
+       default: .2
      },
+     
      height:{
-       default: '600px'
+       default: calcheight
      },
      width:{
-       default: '100%'
+       default: "100%"
      },
      hover:{
        type:Boolean,
        default:true
      }
   },
+
+  methods:{
+      myComputedHeight() 
+     {
+        return calcheight = Math.round((this.width * (9/16)));
+      }
+  },
   
+
   mounted() {
+
+   
     if(this.hover){
         new hoverEffect({
         parent: this.$refs.hover,
@@ -54,11 +69,62 @@ export default {
         speedIn: this.speedin,
         speedOut: this.speedout,
         intensity: this.intensity,
-        displacementImage: this.displacementImage
+        displacementImage: this.displacementImage,
+        
     });
     }
-  },
-  methods: {}
+  }
 };
 </script>
 
+
+<style lang="scss" scoped>
+@import "@/scss/nitras.scss";
+
+
+
+/*
+
+ .project-thumb-effect{
+  // width: 100% !important;
+  height: auto !important;
+
+// @include breakpoint(sm) {
+//     display:none;
+//   }
+
+//   @include breakpoint(xs) {
+//     display:none;
+//   }
+}
+
+.project-thumb-static {
+  // width: 100%;
+  // height: auto !important;
+
+
+  //  @include breakpoint(md) {
+  // display:none;
+  //  }
+
+
+   @include breakpoint(lg) {
+  display:none;
+   }
+
+  //     @include breakpoint(sm) {
+  // display:block;
+  //  }
+
+  @include breakpoint(xs) {
+  display: block;
+}
+}
+*/
+// canvas {
+//   display: block;
+//   width: 100%;
+//   height: auto !important;
+// }
+
+</style>

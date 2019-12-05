@@ -9,10 +9,10 @@
       :size="size"
       :color="color"
       :active-color="activeColor"
-      @click.prevent="toggle"
-    /> 
+      v-on:toggle="onToggle" />
+    
 
-    <div>hello</div>
+    <div v-if="isActive">hello</div>
     <!-- <ul>
       <li>
         <g-link to="/">Werk</g-link>
@@ -41,17 +41,18 @@ export default {
       isActive: false,
       size: 's',
       color: 'white',
-      activeColor: 'rgb(244, 131, 114)'
+      activeColor: 'rgb(244, 131, 114)',
+      isActive: false
     }
   },
   components: {
     'tasty-burger-button': TastyBurgerButton
   },
     methods: {
-    toggle: function (event) 
-    {
-      alert(event.target.tagName);
-      this.isActive = !this.isActive
+    onToggle(active) {
+      // Toggle menu
+      this.isActive = !this.isActive;
+      //alert(this.isActive);
     }
   }
 };
@@ -68,10 +69,5 @@ ul {
     margin-right: 20px;
   }
 }
-.menu {
-  display: none;
-}
-.menu.active{
-  display:block;
-}
+
 </style>
