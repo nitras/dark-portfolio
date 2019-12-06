@@ -3,7 +3,7 @@
 
     <!-- <nav_header /> -->
     <div class="container">
-
+<p>test</p>
       <div  v-if="hover" ref="hover" v-bind:data="newvalue" v-bind:style="{ height: calHeight + 'px', width: newwidth +'%' }">
       </div >
        <g-image v-if="!hover" :src="image1" :style={height:height,width:width} ></g-image>
