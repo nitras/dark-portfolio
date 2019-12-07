@@ -1,17 +1,23 @@
 <template>
   <div>
-    hello
     <!-- <nav_header /> -->
     <div class="container">
-      <div v-if="hover" id="hover" :style="{height:height,width:width}"></div>
+      <div
+        v-if="hover"
+        ref="hover"
+        v-bind:data="newvalue"
+        v-bind:style="{ height: calHeight + 'px', width: newwidth +'%' }"
+      ></div>
       <g-image v-if="!hover" :src="image1" :style="{height:height,width:width}"></g-image>
     </div>
   </div>
 </template>
 
+
 <script>
 import Thumbnail from "hover-effect";
 import hoverEffect from "hover-effect";
+
 export default {
   name: "Thumbnail",
   props: {
@@ -29,11 +35,8 @@ export default {
     intensity: {
       default: 0.1
     },
-    height: {
-      default: "500px"
-    },
     width: {
-      default: "500px"
+      default: "100%"
     },
     hover: {
       type: Boolean,
@@ -41,10 +44,48 @@ export default {
     }
   },
 
+  data() {
+    return {
+      newheight: "100",
+      newwidth: "100",
+      newvalue: 10
+    };
+  },
+  computed: {
+    calHeight() {
+      let height = (this.newheight / this.newwidth) * window.innerWidth;
+      return height;
+    },
+    calwidth() {
+      return this.newwidth;
+    }
+  },
+  created() {
+    let img = new Image();
+    img.src = this.image1;
+    let height;
+    img.onload = () => {
+      this.newheight = img.height;
+      this.newwidth = img.width;
+    };
+  },
   mounted() {
-    if (this.hover) {
+    this.hoverEffect();
+  },
+  methods: {
+    checkFile(filename) {
+      let img = new Image();
+      img.src = this.image1;
+      let height;
+      img.onload = () => {
+        height = (img.height / img.width) * window.innerWidth;
+        console.log(height);
+        this.height = height;
+      };
+    },
+    hoverEffect() {
       new hoverEffect({
-        parent: document.querySelector("#hover"),
+        parent: this.$refs.hover,
         image1: this.image1,
         image2: this.image2,
         speedIn: this.speedin,
@@ -53,8 +94,7 @@ export default {
         displacementImage: this.displacementImage
       });
     }
-  },
-  methods: {}
+  }
 };
 </script>
 
