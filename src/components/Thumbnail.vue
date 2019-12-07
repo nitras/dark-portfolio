@@ -1,130 +1,127 @@
 <template>
   <div>
+    <!-- <nav_header /> -->
     <div class="container">
-      <div  v-if="hover" ref="hover" :style={height:height,width:width}>
-      </div >
-       <g-image v-if="!hover" :src="image1" :style={height:height,width:width} ></g-image>
+      <div
+        v-if="hover"
+        ref="hover"
+        v-bind:style="{ height: calHeight + 'px', width: newwidth +'%' }"
+      ></div>
+      <g-image v-if="!hover" :src="image1" :style="{height:height,width:width}"></g-image>
     </div>
   </div>
 </template>
 
+
 <script>
-//import Thumbnail from "hover-effect";
-import hoverEffect from 'hover-effect' 
+import Thumbnail from "hover-effect";
+import hoverEffect from "hover-effect";
 
 export default {
-
-
-  data(){
-    calcheight
-  },
-  
-  name:"Thumbnail",
-    props:{
-      image1:{
-       required: true
-     },
-      image2:{
-     },
-      displacementImage:{
-     },
-     speedIn:{
-       default: .2
-     },
-     speedOut:{
-       default: 1
-     },
-     intensity:{
-       default: .2
-     },
-     
-     height:{
-       default: calcheight
-     },
-     width:{
-       default: "100%"
-     },
-     hover:{
-       type:Boolean,
-       default:true
-     }
+  name: "Thumbnail",
+  props: {
+    image1: {
+      required: true
+    },
+    image2: {},
+    displacementImage: {},
+    speedIn: {
+      default: 1
+    },
+    speedOut: {
+      default: 1
+    },
+    intensity: {
+      default: 0.1
+    },
+    width: {
+      default: "100%"
+    },
+    hover: {
+      type: Boolean,
+      default: true
+    }
   },
 
-  methods:{
-      myComputedHeight() 
-     {
-        return calcheight = Math.round((this.width * (9/16)));
-      }
+  data() {
+    return {
+      newheight: "100",
+      newwidth: "100"
+    };
   },
-  
+  computed: {
+    calHeight() {
+      let w = this.newwidth;
+      console.log("width " + w);
+      let rat1 = 16;
+      let rat2 = 9;
 
+      let ratio = w / rat1;
+      let height = ratio * rat2;
+
+      //console.log("newheight " + this.newheight);
+      //let height = (this.newheight / 100) * window.innerWidth;
+      console.log("xxxx height " + height);
+
+      return height;
+    },
+    calwidth() {
+      return this.newwidth;
+    }
+  },
+  created() {
+    let img = new Image();
+    img.src = this.image1;
+    let height;
+    img.onload = () => {
+      this.newheight = img.height;
+      this.newwidth = img.width;
+      ////
+      let w = this.newwidth;
+      console.log("width " + w);
+      let rat1 = 16;
+      let rat2 = 9;
+
+      let ratio = w / rat1;
+      let height = ratio * rat2;
+
+      //console.log("newheight " + this.newheight);
+      //let height = (this.newheight / 100) * window.innerWidth;
+      console.log("xxxx height " + height);
+    };
+  },
   mounted() {
-
-   
-    if(this.hover){
-        new hoverEffect({
+    this.hoverEffect();
+  },
+  methods: {
+    checkFile(filename) {
+      let img = new Image();
+      img.src = this.image1;
+      let height;
+      img.onload = () => {
+        height = (img.height / img.width) * window.innerWidth;
+        console.log(height);
+        this.height = height;
+      };
+    },
+    hoverEffect() {
+      new hoverEffect({
         parent: this.$refs.hover,
         image1: this.image1,
         image2: this.image2,
         speedIn: this.speedin,
         speedOut: this.speedout,
         intensity: this.intensity,
-        displacementImage: this.displacementImage,
-        
-    });
+        displacementImage: this.displacementImage
+      });
     }
   }
 };
 </script>
 
-
-<style lang="scss" scoped>
-@import "@/scss/nitras.scss";
-
-
-
-/*
-
- .project-thumb-effect{
-  // width: 100% !important;
+<style>
+canvas {
+  width: 100% !important;
   height: auto !important;
-
-// @include breakpoint(sm) {
-//     display:none;
-//   }
-
-//   @include breakpoint(xs) {
-//     display:none;
-//   }
 }
-
-.project-thumb-static {
-  // width: 100%;
-  // height: auto !important;
-
-
-  //  @include breakpoint(md) {
-  // display:none;
-  //  }
-
-
-   @include breakpoint(lg) {
-  display:none;
-   }
-
-  //     @include breakpoint(sm) {
-  // display:block;
-  //  }
-
-  @include breakpoint(xs) {
-  display: block;
-}
-}
-*/
-// canvas {
-//   display: block;
-//   width: 100%;
-//   height: auto !important;
-// }
-
 </style>

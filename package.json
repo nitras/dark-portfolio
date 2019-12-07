@@ -7,6 +7,7 @@
     "explore": "gridsome explore"
   },
   "dependencies": {
+    "fs-extra": "^8.1.0",
     "gridsome": "^0.6.0",
     "gsap": "^2.1.3",
     "hover-effect": "^1.1.0",

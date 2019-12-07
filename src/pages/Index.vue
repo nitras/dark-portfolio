@@ -9,18 +9,15 @@
           v-for="project in $page.projects.edges"
           :key="project.node.id"
         >
-
-
-
           <Thumbnail
+            class="project-thumbnail"
             :image1="project.node.thumbnail.src"
             :image2="project.node.thumbnail_hover.src"
             :displacementImage="project.node.displacement_image.src"
             :hover="true"
-            style="width:50px,height:300px"
+            height="100%"
+            width="50vmax"
           ></Thumbnail>
-
-
 
           <!-- <g-image
             class="project-thumbnail"
@@ -163,5 +160,9 @@ export default {
   cursor: pointer;
 }
 
-
+.project-thumbnail {
+  display: block;
+  width: 100%;
+  height: "50vmax";
+}
 </style>
