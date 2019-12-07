@@ -1,22 +1,17 @@
 <template>
   <div>
+    hello
     <!-- <nav_header /> -->
     <div class="container">
-      <div
-        v-if="hover"
-        ref="hover"
-        v-bind:style="{ height: calHeight + 'px', width: newwidth +'%' }"
-      ></div>
+      <div v-if="hover" id="hover" :style="{height:height,width:width}"></div>
       <g-image v-if="!hover" :src="image1" :style="{height:height,width:width}"></g-image>
     </div>
   </div>
 </template>
 
-
 <script>
 import Thumbnail from "hover-effect";
 import hoverEffect from "hover-effect";
-
 export default {
   name: "Thumbnail",
   props: {
@@ -34,8 +29,11 @@ export default {
     intensity: {
       default: 0.1
     },
+    height: {
+      default: "500px"
+    },
     width: {
-      default: "100%"
+      default: "500px"
     },
     hover: {
       type: Boolean,
@@ -43,70 +41,10 @@ export default {
     }
   },
 
-  data() {
-    return {
-      newheight: "100",
-      newwidth: "100"
-    };
-  },
-  computed: {
-    calHeight() {
-      let w = this.newwidth;
-      console.log("width " + w);
-      let rat1 = 16;
-      let rat2 = 9;
-
-      let ratio = w / rat1;
-      let height = ratio * rat2;
-
-      //console.log("newheight " + this.newheight);
-      //let height = (this.newheight / 100) * window.innerWidth;
-      console.log("xxxx height " + height);
-
-      return height;
-    },
-    calwidth() {
-      return this.newwidth;
-    }
-  },
-  created() {
-    let img = new Image();
-    img.src = this.image1;
-    let height;
-    img.onload = () => {
-      this.newheight = img.height;
-      this.newwidth = img.width;
-      ////
-      let w = this.newwidth;
-      console.log("width " + w);
-      let rat1 = 16;
-      let rat2 = 9;
-
-      let ratio = w / rat1;
-      let height = ratio * rat2;
-
-      //console.log("newheight " + this.newheight);
-      //let height = (this.newheight / 100) * window.innerWidth;
-      console.log("xxxx height " + height);
-    };
-  },
   mounted() {
-    this.hoverEffect();
-  },
-  methods: {
-    checkFile(filename) {
-      let img = new Image();
-      img.src = this.image1;
-      let height;
-      img.onload = () => {
-        height = (img.height / img.width) * window.innerWidth;
-        console.log(height);
-        this.height = height;
-      };
-    },
-    hoverEffect() {
+    if (this.hover) {
       new hoverEffect({
-        parent: this.$refs.hover,
+        parent: document.querySelector("#hover"),
         image1: this.image1,
         image2: this.image2,
         speedIn: this.speedin,
@@ -115,13 +53,8 @@ export default {
         displacementImage: this.displacementImage
       });
     }
-  }
+  },
+  methods: {}
 };
 </script>
 
-<style>
-canvas {
-  width: 100% !important;
-  height: auto !important;
-}
-</style>

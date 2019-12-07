@@ -15,8 +15,6 @@
             :image2="project.node.thumbnail_hover.src"
             :displacementImage="project.node.displacement_image.src"
             :hover="true"
-            height="100%"
-            width="50vmax"
           ></Thumbnail>
 
           <!-- <g-image
