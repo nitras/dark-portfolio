@@ -3,14 +3,15 @@
     <!-- <div class="contact">
       <g-link class="link" :href="`mailto:${data.email}`">Contact</g-link>
     </div>-->
-    <tasty-burger-button class="burger"
+    <tasty-burger-button
+      class="burger"
       :type="buttonType"
       :active="isActive"
       :size="size"
       :color="color"
       :active-color="activeColor"
-      v-on:toggle="onToggle" />
-    
+      v-on:toggle="onToggle"
+    />
 
     <div v-if="isActive">hello</div>
     <!-- <ul>
@@ -26,36 +27,36 @@
       <li>
         <g-link to="/contact/">Contact</g-link>
       </li>
-    </ul> -->
+    </ul>-->
   </nav>
 </template>
 
 <script>
-import {TastyBurgerButton} from 'vue-tasty-burgers';
-import 'vue-tasty-burgers/dist/vue-tasty-burgers.css';
+// import {TastyBurgerButton} from 'vue-tasty-burgers';
+// import 'vue-tasty-burgers/dist/vue-tasty-burgers.css';
 
-export default {
-  data () {
-    return {
-      buttonType: 'elastic-r',
-      isActive: false,
-      size: 's',
-      color: 'white',
-      activeColor: 'rgb(244, 131, 114)',
-      isActive: false
-    }
-  },
-  components: {
-    'tasty-burger-button': TastyBurgerButton
-  },
-    methods: {
-    onToggle(active) {
-      // Toggle menu
-      this.isActive = !this.isActive;
-      //alert(this.isActive);
-    }
-  }
-};
+// export default {
+//   data() {
+//     return {
+//       buttonType: "elastic-r",
+//       isActive: false,
+//       size: "s",
+//       color: "white",
+//       activeColor: "rgb(244, 131, 114)",
+//       isActive: false
+//     };
+//   },
+//   components: {
+//     "tasty-burger-button": TastyBurgerButton
+//   },
+//   methods: {
+//     onToggle(active) {
+//       // Toggle menu
+//       this.isActive = !this.isActive;
+//       //alert(this.isActive);
+//     }
+//   }
+// };
 </script>
 
 <style lang="scss" scoped>
@@ -69,5 +70,4 @@ ul {
     margin-right: 20px;
   }
 }
-
 </style>
