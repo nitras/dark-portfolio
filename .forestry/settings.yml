@@ -30,7 +30,6 @@ sections:
 - type: document
   path: contact/contact-page.md
   label: Contact
-  match: "**/*"
 - type: heading
   label: Settings
 - type: document
