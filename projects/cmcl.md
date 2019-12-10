@@ -1,6 +1,6 @@
 ---
 title: CMCL
-thumbnail: "../static/uploads/827e4260883469.5a5cccc989703.jpg"
+thumbnail: "../static/uploads/Artboard 1.png"
 year: "2017"
 categories:
 - Webdevelopment
