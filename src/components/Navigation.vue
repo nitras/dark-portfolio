@@ -3,7 +3,7 @@
     <!-- <div class="contact">
       <g-link class="link" :href="`mailto:${data.email}`">Contact</g-link>
     </div>-->
-    <tasty-burger-button
+    <!-- <tasty-burger-button
       class="burger"
       :type="buttonType"
       :active="isActive"
@@ -11,9 +11,9 @@
       :color="color"
       :active-color="activeColor"
       v-on:toggle="onToggle"
-    />
+    /> -->
 
-    <div v-if="isActive">hello</div>
+    <!-- <div v-if="isActive">hello</div> -->
     <!-- <ul>
       <li>
         <g-link to="/">Werk</g-link>
