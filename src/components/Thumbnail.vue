@@ -4,7 +4,7 @@
     <!-- <nav_header /> -->
     <div class="container">
       <p>new height: {{newheight}}</p>
-      <div class="myclass"  v-if="hover" ref="hover" v-bind:style="{ height: calHeight + 'px', width: width +'%' }">
+      <div class="thumbnail"  v-if="hover" ref="hover" v-bind:style="{ height: calHeight + 'px', width: width +'%' }">
       </div >
        <g-image v-if="!hover" :src="image1" :style={height:height,width:width} ></g-image>
     </div>
@@ -54,20 +54,20 @@ export default {
 computed:{
   calHeight(){
 
-    var w = window.innerWidth
-|| document.documentElement.clientWidth
-|| document.body.clientWidth;
+//     var w = window.innerWidth
+// || document.documentElement.clientWidth
+// || document.body.clientWidth;
 
-    console.log("innner width " + w);
-//     this.newwidth = window.innerWidth;
-//          let height = this.newheight/this.newwidth;
-        let xHeight = this.newheight;
+//     console.log("innner width " + w);
+// //     this.newwidth = window.innerWidth;
+// //          let height = this.newheight/this.newwidth;
+         let xHeight = this.newheight;
 
-        let height = this.newheight/this.newwidth*window.innerWidth;
+//         let height = this.newheight/this.newwidth*w;
 
 
-        console.log("xheight " + xHeight);
-         return xHeight;
+       console.log("xheight " + xHeight);
+        return xHeight;
    
   },
     calwidth(){
@@ -115,7 +115,7 @@ computed:{
 <style>
 
 
-.myclass {
+.thumbnail {
   padding-bottom: 56.25%; /* ratio 16/9 */
 }
 
