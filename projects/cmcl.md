@@ -18,7 +18,7 @@ gallery:
 - "../static/uploads/eb723851944227.58ff649a8ae69.jpg"
 - "../static/uploads/4decee70439237.5baced37c49e4.jpg"
 thumbnail_alt: "../static/uploads/1a775351944227.58ff9d22ebaa2.jpg"
-thumbnail_hover: "../static/uploads/1a775351944227.58ff9d22ebaa2.jpg"
+thumbnail_hover: "../static/uploads/e9e36060883469.5a5cccc987050.jpg"
 displacement_image: "../static/uploads/11.jpg"
 
 ---
